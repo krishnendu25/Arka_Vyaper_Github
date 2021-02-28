@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Arka Vyapar</string>
+    <string name="login">LOGIN</string>
+    <string name="owner_first_name">Owner First Name</string>
+    <string name="store_name_business_name">Store Name/Business Name</string>
+    <string name="owner_last_name">Owner Last Name</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="whatsapp_number">Whatsapp Number</string>
+    <string name="email">Email</string>
+    <string name="images_on_your_post_will_appear_of_this_size">Images on your post will appear of this size.</string>
+    <string name="why_visit_store_reason_1">Why visit store - Reason 1</string>
+    <string name="why_visit_store_reason_2">Why visit store - Reason 2</string>
+    <string name="why_visit_store_reason_3">Why visit store - Reason 3</string>
+    <string name="store_address">Store Address</string>
+    <string name="custom_title">SELECT PICTURES</string>
+    <string name="default_directory">Pictures</string>
+    <string name="toolbar_title">Choice Image</string>
+    <string name="no_image">No Image Selected </string>
+    <string-array name="tab_titles">
+        <item>Camera</item>
+        <item>Gallery</item>
+    </string-array>
+    <string name="selected_image">Selected Image</string>
+    <string name="max_count_msg">A maximum of %1$d pictures allowed</string>
+    <string name="min_count_msg">you have to choice %1$d images</string>
+    <string name="focusing">focusing/flash...wait a minute</string>
+    <string name="terms_amp_conditions"><u>Terms &amp; Conditions</u></string>
+    <string name="resend_otp"><u>Resend OTP</u></string>
+ <!--   <string name="skip_for_now"><u>Skip for now</u></string>-->
+    <string name="skip_for_now"></string>
+    <string name="attach_image_of_your_adhaar_card"><u>Attach image of your Adhaar card</u></string>
+    <string name="thank_you_mr_bharat_your_basic_registration_is_done_our_team_will_verify_your_documents_will_approve_in_3_working_days"><![CDATA[Thank you Mr. Bharat! Your basic registration is done. Our team will verify your documents & will approve in 3 working days.]]></string>
+    <string name="change_location"><u>Change location</u></string>
+    <string name="full_name">Full Name</string>
+    <string name="mobile">Mobile</string>
+    <string name="notifications">Notifications</string>
+    <string name="my_buyer_list">My Buyer List</string>
+    <string name="profile_settings">Profile Settings</string>
+    <string name="transaction_history">Transaction History</string>
+    <string name="my_listed_products">My Listed Products</string>
+    <string name="customer_care">Customer Care</string>
+</resources>

@@ -1,0 +1,164 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/view_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_base"
+            android:layout_above="@+id/action_btn_contianer"
+
+            />
+        <RelativeLayout
+            android:layout_width="@dimen/dimen_50dp"
+            android:layout_height="@dimen/dimen_50dp"
+            android:layout_alignParentStart="true"
+            android:padding="10dp"
+            android:visibility="visible"
+            android:layout_margin="10dp"
+            android:background="@drawable/notification_round_back"
+            android:layout_alignParentRight="true">
+            <ImageButton
+                android:id="@+id/Backward_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:background="@color/transparent"
+                android:rotation="180"
+                android:tint="@color/deep_purpel"
+                android:src="@drawable/ic_next_step" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/action_btn_contianer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+
+            android:divider="?android:dividerHorizontal"
+
+            android:orientation="vertical">
+
+            <TextView
+
+                android:id="@+id/tv_selected_title"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:fontFamily="@font/poppinsregular"
+                android:padding="5dp"
+                android:text="@string/selected_image"
+                android:textAllCaps="true"
+                android:visibility="gone"
+                android:textColor="@color/deep_purpel"
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+
+
+
+
+
+
+            <FrameLayout
+                android:id="@+id/view_selected_photos_container"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:background="@color/background_base"
+                android:layout_alignParentBottom="true"
+                >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/background_base"
+                    android:weightSum="5">
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rc_selected_photos"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/selected_photos_empty"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="end"
+                            android:paddingEnd="@dimen/dimen_50dp"
+                            android:text="No Images"
+                            android:textAllCaps="true"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textColor="@color/light_green"/>
+                    </FrameLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/Done_view"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:visibility="visible"
+                        android:layout_weight="1">
+                        <ImageView
+                            android:id="@+id/Done_btn"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:padding="@dimen/padding_10"
+                            android:background="@drawable/ic_selected"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+              <!-- -->
+            </FrameLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="5px"
+                android:background="@color/light_green"/>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:minHeight="?attr/actionBarSize"
+                android:paddingBottom="4dp"
+                app:tabBackground="@color/background_base"
+                app:tabGravity="fill"
+                android:background="@color/background_base"
+                app:tabIndicator="@color/Gray"
+                app:tabIndicatorColor="@color/light_green"
+                app:tabIndicatorHeight="3dp"
+                app:tabMaxWidth="0dp"
+                app:tabRippleColor="@color/transparent"
+                app:tabSelectedTextColor="@color/light_green"
+                app:tabTextAppearance="@style/tab_text_s"
+                app:tabTextColor="@color/white" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

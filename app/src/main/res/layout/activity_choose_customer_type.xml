@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.arkavyapar.View.UI.ChooseCustomerType">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/ic_path892" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_0dp"
+                android:layout_weight=".5"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Register now"
+                    android:textColor="#6B3024"
+                    android:textSize="@dimen/dimen_25dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_0dp"
+                android:layout_weight="3.5"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_seller" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="I’m a Seller"
+                        android:textColor="#606060"
+                       android:layout_marginTop="@dimen/padding_10"
+                        android:textSize="@dimen/dimen_18dp" />
+                    <RadioButton
+                        android:id="@+id/sellerRB"
+                        android:layout_width="@dimen/dimen_30dp"
+                        android:onClick="iAMSeller"
+                        android:layout_height="@dimen/dimen_30dp"
+                        android:layout_marginTop="@dimen/padding_10"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_byer" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="I’m a Buyer"
+                        android:textColor="#606060"
+                        android:layout_marginTop="@dimen/padding_10"
+                        android:textSize="@dimen/dimen_18dp" />
+                    <RadioButton
+                        android:id="@+id/buyerRB"
+                        android:layout_width="@dimen/dimen_30dp"
+                        android:onClick="iAMVByer"
+                        android:layout_height="@dimen/dimen_30dp"
+                        android:layout_marginTop="@dimen/padding_10"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nextTV"
+                    android:layout_width="200dp"
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:background="@drawable/green_btn_ripple"
+                    android:fontFamily="@font/arialbold"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/padding_10"
+                    android:onClick="nextPageFromRegister"
+                    android:paddingEnd="@dimen/padding_10"
+                    android:text="Next"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:fontFamily="@font/poppinsregular"
+                    android:paddingStart="@dimen/padding_5"
+                    android:text="@string/skip_for_now"
+                    android:textColor="#606060"
+                    android:textSize="@dimen/dimen_16dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

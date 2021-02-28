@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="fill_parent"
+        android:background="@drawable/menu_bg"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_0dp"
+            android:layout_weight="1.2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="start|center"
+                android:layout_marginStart="35dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userProfileIV"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/ic_placeholder"/>
+                <TextView
+                    android:id="@+id/userNameTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Krishnendu Manna"
+                    android:layout_marginEnd="@dimen/padding_10"
+                    android:textColor="#2C2C2C"
+                    android:textSize="@dimen/dimen_20dp" />
+                <TextView
+                    android:id="@+id/userRollTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_5"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Seller"
+                    android:textColor="#2C2C2C"
+                    android:textSize="@dimen/dimen_14dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_0dp"
+            android:layout_weight="1.2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="35dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/menu_listingProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="@string/my_listed_products"
+                    android:textColor="#2C2C2C"
+                    android:textSize="@dimen/dimen_18dp" />
+
+                <TextView
+                    android:id="@+id/menu_notifications"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="@string/notifications"
+                    android:textColor="#2C2C2C"
+                    android:textSize="@dimen/dimen_18dp" />
+
+                <TextView
+                    android:id="@+id/menu_Transaction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="@string/transaction_history"
+                    android:textColor="#2C2C2C"
+                    android:textSize="@dimen/dimen_18dp" />
+
+                <TextView
+                    android:id="@+id/menu_BuyerList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="@string/my_buyer_list"
+                    android:textColor="#2C2C2C"
+                    android:textSize="@dimen/dimen_18dp" />
+
+                <TextView
+                    android:id="@+id/menu_ProfileSettings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="@string/profile_settings"
+                    android:textColor="#2C2C2C"
+                    android:textSize="@dimen/dimen_18dp" />
+
+                <TextView
+                    android:id="@+id/menu_CustomerCare"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="@string/customer_care"
+                    android:textColor="#2C2C2C"
+                    android:textSize="@dimen/dimen_18dp" />
+                <TextView
+                    android:id="@+id/menu_Logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Logout"
+                    android:textColor="#2C2C2C"
+                    android:textSize="@dimen/dimen_18dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_0dp"
+            android:layout_weight=".6">
+
+            <LinearLayout
+                android:id="@+id/todyRateView"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:gravity="center"
+                android:background="#E67656">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_18dp"
+                    android:text="₹     Today’s Market Rate"
+                    android:fontFamily="@font/poppins_bold"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

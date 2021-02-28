@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.arkavyapar.View.UI.IdentityVerificationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/ic_path892" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_0dp"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Get verified"
+                    android:textColor="#6B3024"
+                    android:textSize="@dimen/dimen_25dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:gravity="center"
+                    android:text="Click Picture of your Aadhar card Or Verify Automatically"
+                    android:textColor="#606060"
+                    android:textSize="@dimen/dimen_16dp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profileIV"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:onClick="selectPhotoFromCamera"
+                    android:src="@drawable/ic_selectchoose_profile" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:paddingStart="@dimen/padding_5"
+                    android:text="Upload Your Photo"
+                    android:textColor="#606060"
+                    android:textSize="@dimen/dimen_18dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_0dp"
+                android:layout_weight=".8"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dimen_25dp"
+                    android:layout_marginEnd="@dimen/dimen_25dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/enterFullName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:hint="Full Name"
+                        android:inputType="textPersonName"
+                        android:textColor="#707070"
+                        android:textColorHint="#707070"
+                        app:backgroundTint="#707070" />
+
+                    <TextView
+                        android:id="@+id/attachedIDCart"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_10"
+                        android:fontFamily="@font/poppinsregular"
+                        android:onClick="selectIDImagePicker"
+                        android:paddingStart="@dimen/padding_5"
+                        android:text="@string/attach_image_of_your_adhaar_card"
+                        android:textColor="#1A50A5"
+                        android:textSize="@dimen/dimen_14dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/attachedIDSUCCESS"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/padding_10"
+                            android:fontFamily="@font/poppins_bold"
+                            android:paddingStart="@dimen/padding_5"
+                            android:text="Adhaar Card Attached Successful"
+                            android:textColor="@color/green"
+                            android:textSize="@dimen/dimen_14dp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_0dp"
+                android:layout_weight=".7"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:layout_marginTop="@dimen/dimen_30dp"
+                    android:background="@drawable/green_btn_ripple"
+                    android:fontFamily="@font/arialbold"
+                    android:gravity="center"
+                    android:onClick="submitForApproval"
+                    android:paddingStart="@dimen/dimen_20dp"
+                    android:paddingEnd="@dimen/dimen_20dp"
+                    android:text="Submit for approval"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:fontFamily="@font/poppinsregular"
+                    android:paddingStart="@dimen/padding_5"
+                    android:text="@string/skip_for_now"
+                    android:textColor="#606060"
+                    android:textSize="@dimen/dimen_16dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/suceesFullView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/check_in_anim"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="successfulcheck.json"
+                app:lottie_loop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:textSize="@dimen/dimen_20dp"
+                android:textColor="#ed8c70"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Your Account Created Successfully"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
