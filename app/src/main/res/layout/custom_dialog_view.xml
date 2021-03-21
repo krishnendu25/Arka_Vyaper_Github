@@ -6,8 +6,8 @@
     android:background="#8F6B3023">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="350dp"
-        android:layout_height="350dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         app:cardCornerRadius="@dimen/padding_10"
@@ -41,10 +41,12 @@
                         android:id="@+id/dialogText"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:textSize="@dimen/dimen_16dp"
-                        android:gravity="center"
                         android:fontFamily="@font/poppinsregular"
-                        android:textColor="#666666"/>
+                        android:gravity="center"
+                        android:paddingStart="@dimen/padding_10"
+                        android:paddingEnd="@dimen/padding_10"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/dimen_16dp" />
 
                 </RelativeLayout>
 

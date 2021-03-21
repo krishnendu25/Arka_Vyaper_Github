@@ -14,6 +14,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.provider.Settings
 import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.arkavyapar.App
@@ -26,24 +27,36 @@ import com.arkavyapar.Utils.ToastUtils
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.tasks.OnFailureListener
 import com.google.android.gms.tasks.OnSuccessListener
+import com.skyfishjy.library.RippleBackground
+import org.json.JSONObject
 
 
 class GetMyLocation : AppCompatActivity()
 {
     lateinit var mActivity: Activity
     private var locationManager: LocationManager? = null
+    private var rippleBackground: RippleBackground? = null
+    private var manualAddress: TextView? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_get_my_location)
         iniView()
         Animation.setAnimation(mActivity)
-        getMyCurrentLocation()
+        try {
+            getMyCurrentLocation()
+        } catch (e: Exception) {
+        }
 
     }
 
     private fun iniView() {
         mActivity = this@GetMyLocation
         locationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager;
+          rippleBackground=findViewById(R.id.content);
+    /*    manualAddress=findViewById(R.id.manualAddress);
+        manualAddress!!.alpha=0.5f
+        manualAddress!!.isEnabled=false*/
+
     }
 
     fun setManualAddress(view: View) {
@@ -53,7 +66,8 @@ class GetMyLocation : AppCompatActivity()
 
 
     private fun getMyCurrentLocation() {
-        LocalModel.instance!!.showProgressDialog(mActivity,"Getting location....")
+        rippleBackground!!.startRippleAnimation();
+
             if (locationManager!!.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
                 if (ActivityCompat.checkSelfPermission(
                         this,
@@ -70,13 +84,22 @@ class GetMyLocation : AppCompatActivity()
                             val runnable = Runnable {
                                 LocalModel.instance!!.cancelProgressDialog()
                                 if (location != null) {
-                                    locationFetched(location)
+                                    try {
+                                        locationFetched(location)
+                                    } catch (e: Exception) {
+                                    }
                                 }
                             }
                             handler.postDelayed(runnable, 3500)
-                        }).addOnFailureListener(OnFailureListener {    LocalModel.instance!!.cancelProgressDialog() })
+                        }).addOnFailureListener(OnFailureListener {   rippleBackground!!.stopRippleAnimation();
+                        manualAddress!!.alpha=1.0f
+                        manualAddress!!.isEnabled=true
+                        })
                 }
             }else{
+                manualAddress!!.alpha=1.0f
+                manualAddress!!.isEnabled=true
+                rippleBackground!!.stopRippleAnimation();
                 LocalModel.instance!!.cancelProgressDialog()
                 trunOnGPS()
             }
@@ -85,6 +108,15 @@ class GetMyLocation : AppCompatActivity()
 
     private fun locationFetched(location: Location) {
         var Address = Constants.getAllAddress(LatLng(location.latitude,location.longitude))
+        try {
+            var details =
+                JSONObject(App.instance!!.mPrefs!!.getString(StringUtils.signUpBundel, ""))
+            details.put(StringUtils.go_latitude,location.latitude)
+            details.put(StringUtils.go_longitude,location.longitude)
+            App.instance!!.mPrefs!!.setString(StringUtils.signUpBundel, details.toString())
+        } catch (e: Exception) {
+        }
+
         val intent= Intent(this, AdreessActivity::class.java)
         intent.putExtra(StringUtils.intent_Address,Address.toString())
         if (Build.VERSION.SDK_INT > 20) {

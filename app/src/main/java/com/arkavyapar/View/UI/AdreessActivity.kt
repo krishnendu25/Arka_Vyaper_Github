@@ -39,7 +39,7 @@ class AdreessActivity : AppCompatActivity() {
             allAdressDtails = intent.getStringExtra(StringUtils.intent_Address)
             var details = JSONObject(allAdressDtails)
             address1Tv!!.setText(details.getString("address"))
-            address2Tv!!.setText(details.getString("address"))
+            address2Tv!!.setText(details.getString("knownName"))
             pincodeTV!!.setText(details.getString("postalCode"))
             cityTV!!.setText(details.getString("city"))
             StateTV!!.setText(details.getString("state"))

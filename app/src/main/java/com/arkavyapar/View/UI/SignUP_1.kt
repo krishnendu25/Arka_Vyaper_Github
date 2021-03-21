@@ -17,14 +17,13 @@ import com.arkavyapar.Utils.StringUtils
 import com.arkavyapar.Utils.ToastUtils
 import com.arkavyapar.Utils.Utils
 import de.hdodenhof.circleimageview.CircleImageView
-import org.json.JSONArray
 import org.json.JSONObject
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.util.Base64;
 import com.arkavyapar.App
 import com.arkavyapar.Utils.Loader.LocalModel
-import java.io.ByteArrayOutputStream;
+import com.daimajia.androidanimations.library.Techniques
+import com.daimajia.androidanimations.library.YoYo
 
 class SignUP_1 : AppCompatActivity() {
     private var bitmap: Bitmap?  = null
@@ -48,6 +47,7 @@ class SignUP_1 : AppCompatActivity() {
         passwordED =  findViewById(R.id.passwordED);
         profileIV =  findViewById(R.id.profileIV);
         mActivity = this@SignUP_1
+       Utils.runAnimation(profileIV!!,Techniques.ZoomInLeft,500)
     }
 
     fun selectProfileDP(view: View) {
@@ -75,12 +75,20 @@ class SignUP_1 : AppCompatActivity() {
     fun hitsignUpDone(view: View) {
         LocalModel.instance!!.showProgressDialog(this,"")
         if (validation()){
+            try {
+                if (bitmap==null){
+                    bitmap = BitmapFactory.decodeResource(applicationContext.getResources(),R.drawable.ic_placeholder);
+                }
+            } catch (e: Exception) {
+            }
+
+
             var jsonObject = JSONObject()
             jsonObject.put(StringUtils.go_fullName,fullNameED!!.text.toString())
             jsonObject.put(StringUtils.go_phoneNo,mobileED!!.text.toString())
             jsonObject.put(StringUtils.go_emailID,emailED!!.text.toString())
             jsonObject.put(StringUtils.go_passWord,passwordED!!.text.toString())
-            jsonObject.put(StringUtils.profilePicture,encodeImage(bitmap!!))
+            jsonObject.put(StringUtils.profilePicture,Constants.encodeImage(bitmap!!))
             LocalModel.instance!!.cancelProgressDialog()
             App.instance!!.mPrefs!!.setString(StringUtils.signUpBundel,jsonObject.toString())
             Utils.launchActivity(mActivity,MobileNoVerification::class.java)
@@ -118,11 +126,11 @@ class SignUP_1 : AppCompatActivity() {
             ToastUtils.shortToast("Please Enter A Valid  EmailID")
             Animation.editText_Sh(emailED!!)
             return false
-        } else if (bitmap==null){
+        } /*else if (bitmap==null){
             ToastUtils.shortToast("Please Select A Profile Picture")
             Animation.editText_Sh(profileIV!!)
             return false
-        }
+        }*/
         else {
             return true
         }
@@ -142,10 +150,6 @@ class SignUP_1 : AppCompatActivity() {
             }
         }
     }
-    private fun encodeImage(bm: Bitmap): String? {
-        val baos = ByteArrayOutputStream()
-        bm.compress(Bitmap.CompressFormat.JPEG, 100, baos)
-        val b = baos.toByteArray()
-        return Base64.encodeToString(b, Base64.DEFAULT)
-    }
+
+
 }

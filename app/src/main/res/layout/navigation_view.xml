@@ -16,6 +16,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/dimen_0dp"
+            android:background="@color/transparent"
             android:layout_weight="1.2">
 
             <LinearLayout
@@ -23,12 +24,13 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:gravity="start|center"
+                android:background="@color/transparent"
                 android:layout_marginStart="35dp">
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/userProfileIV"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:src="@drawable/ic_placeholder"/>
                 <TextView
                     android:id="@+id/userNameTV"
@@ -55,12 +57,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/dimen_0dp"
-            android:layout_weight="1.2">
+            android:background="@color/transparent"
+            android:layout_weight="1.4">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="35dp"
+                android:background="@color/transparent"
                 android:orientation="vertical">
 
                 <TextView
@@ -71,7 +75,7 @@
                     android:fontFamily="@font/poppinsregular"
                     android:text="@string/my_listed_products"
                     android:textColor="#2C2C2C"
-                    android:textSize="@dimen/dimen_18dp" />
+                    android:textSize="@dimen/dimen_16dp" />
 
                 <TextView
                     android:id="@+id/menu_notifications"
@@ -81,17 +85,18 @@
                     android:fontFamily="@font/poppinsregular"
                     android:text="@string/notifications"
                     android:textColor="#2C2C2C"
-                    android:textSize="@dimen/dimen_18dp" />
+                    android:textSize="@dimen/dimen_16dp" />
 
                 <TextView
                     android:id="@+id/menu_Transaction"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/padding_10"
+                    android:visibility="gone"
                     android:fontFamily="@font/poppinsregular"
                     android:text="@string/transaction_history"
                     android:textColor="#2C2C2C"
-                    android:textSize="@dimen/dimen_18dp" />
+                    android:textSize="@dimen/dimen_16dp" />
 
                 <TextView
                     android:id="@+id/menu_BuyerList"
@@ -101,7 +106,7 @@
                     android:fontFamily="@font/poppinsregular"
                     android:text="@string/my_buyer_list"
                     android:textColor="#2C2C2C"
-                    android:textSize="@dimen/dimen_18dp" />
+                    android:textSize="@dimen/dimen_16dp" />
 
                 <TextView
                     android:id="@+id/menu_ProfileSettings"
@@ -111,7 +116,7 @@
                     android:fontFamily="@font/poppinsregular"
                     android:text="@string/profile_settings"
                     android:textColor="#2C2C2C"
-                    android:textSize="@dimen/dimen_18dp" />
+                    android:textSize="@dimen/dimen_16dp" />
 
                 <TextView
                     android:id="@+id/menu_CustomerCare"
@@ -121,7 +126,7 @@
                     android:fontFamily="@font/poppinsregular"
                     android:text="@string/customer_care"
                     android:textColor="#2C2C2C"
-                    android:textSize="@dimen/dimen_18dp" />
+                    android:textSize="@dimen/dimen_16dp" />
                 <TextView
                     android:id="@+id/menu_Logout"
                     android:layout_width="match_parent"
@@ -130,14 +135,15 @@
                     android:fontFamily="@font/poppinsregular"
                     android:text="Logout"
                     android:textColor="#2C2C2C"
-                    android:textSize="@dimen/dimen_18dp" />
+                    android:textSize="@dimen/dimen_16dp" />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/dimen_0dp"
-            android:layout_weight=".6">
+            android:background="@color/transparent"
+            android:layout_weight=".4">
 
             <LinearLayout
                 android:id="@+id/todyRateView"
@@ -149,7 +155,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/dimen_18dp"
+                    android:textSize="@dimen/dimen_16dp"
                     android:text="₹     Today’s Market Rate"
                     android:fontFamily="@font/poppins_bold"/>
 

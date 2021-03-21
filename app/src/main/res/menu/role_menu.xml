@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+    <item
+        android:id="@+id/byermenu"
+        app:showAsAction="always"
+        android:title="Buyer" />
+
+    <item
+        android:id="@+id/sellerMenu"
+        app:showAsAction="always"
+        android:title="Seller"/>
+</menu>

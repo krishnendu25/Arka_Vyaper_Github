@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".View.UI.RequestToUserActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/ic_path892" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileIV"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                app:civ_border_color="#ed8c70"
+                android:layout_gravity="center"
+                app:civ_border_width="@dimen/padding_5"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:src="@drawable/ic_selectchoose_profile"
+                />
+            <TextView
+                android:id="@+id/seller_Name_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Krishnendu Manna"
+                android:textColor="#6B3024"
+                android:layout_marginTop="@dimen/padding_10"
+                android:textSize="@dimen/dimen_20dp" />
+            <TextView
+                android:id="@+id/seller_Location_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:text="West Bengal"
+                android:textColor="#606060"
+                android:layout_marginTop="@dimen/padding_5"
+                android:textSize="@dimen/dimen_16dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/seller_product_list"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:layout_marginEnd="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/padding_10"
+                android:scrollbars="none"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:layout_marginEnd="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/padding_10"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Enter Your Phone No"
+                    android:textColor="#6B3024"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:textSize="@dimen/dimen_16dp" />
+
+                <EditText
+                    android:id="@+id/myPhoneNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    app:backgroundTint="#707070"
+                    android:hint="Phone No"
+                    android:layout_marginTop="@dimen/padding_5"
+                    android:gravity="center|start"
+                    android:textSize="@dimen/dimen_12dp"
+                    android:paddingStart="@dimen/padding_10"
+                    android:textColor="#707070"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColorHint="#707070"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Why do you need this"
+                    android:textColor="#6B3024"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:textSize="@dimen/dimen_16dp" />
+                <TextView
+                    android:id="@+id/needDD"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:hint="Select"
+                    android:textColorHint="#AAAAAA"
+                    android:textColor="#AAAAAA"
+                    android:textSize="@dimen/dimen_12dp"
+                    android:paddingStart="@dimen/padding_10"
+                    android:drawableEnd="@drawable/ic_down"
+                    android:fontFamily="@font/poppinsregular"
+                    android:gravity="center|start"
+                    android:paddingEnd="@dimen/dimen_20dp"
+                    android:drawableTint="#AAAAAA"
+                    android:singleLine="true"
+                    android:background="@drawable/edittext_underline"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Enter any Specific Requirement"
+                    android:textColor="#6B3024"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:textSize="@dimen/dimen_16dp" />
+                <EditText
+                    android:id="@+id/requirement_ED"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:backgroundTint="#707070"
+                    android:textSize="@dimen/dimen_12dp"
+                    android:hint="Requirement"
+                    android:maxLines="3"
+                    android:gravity="center|start|top"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:paddingStart="@dimen/padding_10"
+                    android:textColor="#707070"
+                    android:inputType="textImeMultiLine"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColorHint="#707070"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:layout_marginTop="@dimen/dimen_30dp"
+                    android:background="@drawable/green_btn_ripple"
+                    android:fontFamily="@font/arialbold"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="100dp"
+                    android:onClick="submitTheRequest"
+                    android:paddingStart="@dimen/dimen_20dp"
+                    android:paddingEnd="@dimen/dimen_20dp"
+                    android:text="Submit For Requirement"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_16dp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

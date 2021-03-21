@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginStart="@dimen/padding_15"
+    android:background="@color/white"
+    android:layout_marginEnd="@dimen/padding_15"
+    android:layout_marginTop="@dimen/padding_15"
+    android:layout_height="147dp">
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_30dp">
+        <TextView
+            android:id="@+id/producctQYT"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Product 1"
+            android:textColor="#666666"
+            android:gravity="center|start"
+            android:paddingStart="@dimen/dimen_20dp"
+            android:textSize="@dimen/dimen_16dp"/>
+
+        <TextView
+            android:id="@+id/addMoreProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/add_more"
+            android:textColor="#E67656"
+            android:visibility="gone"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_gravity="end"
+            android:gravity="center|start"
+            android:paddingStart="@dimen/dimen_20dp"
+            android:textSize="@dimen/dimen_16dp"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="117dp"
+        android:weightSum="5"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="2">
+            <ImageView
+                android:id="@+id/selectProductIV"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/dotted_broder"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:weightSum="4"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/catagoryDD"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:hint="@string/category"
+                android:textColorHint="#AAAAAA"
+                android:textColor="#AAAAAA"
+                android:drawableEnd="@drawable/ic_down"
+                android:fontFamily="@font/poppinsregular"
+                android:gravity="center|start"
+                android:drawableTint="#AAAAAA"
+                android:singleLine="true"
+                android:textSize="@dimen/dimen_14sp"
+                android:background="@drawable/edittext_underline"
+                android:layout_weight="1"/>
+            <EditText
+                android:id="@+id/subcatagoryDD"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:hint="@string/sub_category"
+                android:textColorHint="#AAAAAA"
+                android:fontFamily="@font/poppinsregular"
+                android:textColor="#AAAAAA"
+                android:gravity="center|start"
+                android:drawableTint="#AAAAAA"
+                android:textSize="@dimen/dimen_14sp"
+                android:singleLine="true"
+                android:background="@drawable/edittext_underline"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"/>
+            <EditText
+                android:id="@+id/avalibleQytED"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:hint="@string/available_quantity"
+                android:textColorHint="#AAAAAA"
+                android:textColor="#AAAAAA"
+                android:inputType="number"
+                android:gravity="center|start"
+                android:textSize="@dimen/dimen_14sp"
+                android:singleLine="true"
+                android:fontFamily="@font/poppinsregular"
+                android:background="@drawable/edittext_underline"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/avalibleDateDD"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:hint="@string/available_dates"
+                android:textColorHint="#AAAAAA"
+                android:textColor="#AAAAAA"
+                android:singleLine="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:ellipsize="marquee"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="@dimen/dimen_14sp"
+                android:drawableTint="#AAAAAA"
+                android:drawableEnd="@drawable/ic_down"
+                android:gravity="center|start"
+                android:background="@drawable/edittext_underline"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
+
+</RelativeLayout>

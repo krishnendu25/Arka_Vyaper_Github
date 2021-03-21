@@ -15,6 +15,7 @@ interface StringUtils {
         var go_passWord:String = "go_passWord"
         var go_emailID:String = "go_emailID"
         var profilePicture:String = "profilePicture"
+        var IDPicture:String = "profilePicture"
         var go_address_1:String = "go_address_1"
         var go_address_2:String = "go_address_2"
         var go_Pincode:String = "go_Pincode"
@@ -53,6 +54,8 @@ interface StringUtils {
 
         var I_am_Buyer:String ="Buyer"
         var I_am_Seller:String ="Seller"
+
+
 
     }
 }

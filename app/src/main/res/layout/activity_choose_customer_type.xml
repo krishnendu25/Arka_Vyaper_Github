@@ -35,7 +35,7 @@
                     android:fontFamily="@font/poppins_bold"
                     android:text="Register now"
                     android:textColor="#6B3024"
-                    android:textSize="@dimen/dimen_25dp" />
+                    android:textSize="@dimen/dimen_20dp" />
 
 
             </LinearLayout>

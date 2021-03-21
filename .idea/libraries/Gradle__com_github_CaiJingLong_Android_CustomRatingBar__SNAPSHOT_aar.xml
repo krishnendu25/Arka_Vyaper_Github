@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.CaiJingLong:Android-CustomRatingBar:-SNAPSHOT@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6a219db4e3ba2b7b28750d4cf89f3e06/jetified-Android-CustomRatingBar--SNAPSHOT/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6a219db4e3ba2b7b28750d4cf89f3e06/jetified-Android-CustomRatingBar--SNAPSHOT/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6a219db4e3ba2b7b28750d4cf89f3e06/jetified-Android-CustomRatingBar--SNAPSHOT/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.CaiJingLong/Android-CustomRatingBar/-SNAPSHOT/d08bab6ead5df1c7468accaf07ba0e12091eaf53/Android-CustomRatingBar--SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

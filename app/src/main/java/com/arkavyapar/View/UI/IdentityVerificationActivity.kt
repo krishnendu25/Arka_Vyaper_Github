@@ -12,6 +12,7 @@ import android.os.Handler
 import android.util.Base64
 import android.view.View
 import android.widget.EditText
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
@@ -19,6 +20,7 @@ import com.arkavyapar.App
 import com.arkavyapar.Constant.Animation
 import com.arkavyapar.Constant.AppConstants
 import com.arkavyapar.Constant.Constants
+import com.arkavyapar.Model.ReponseModel.CommonModel
 import com.arkavyapar.R
 import com.arkavyapar.Utils.Loader.LocalModel
 import com.arkavyapar.Utils.Permissons
@@ -27,7 +29,14 @@ import com.arkavyapar.Utils.StringUtils
 import com.arkavyapar.Utils.ToastUtils
 import com.arkavyapar.View.Interface.AlertTask
 import de.hdodenhof.circleimageview.CircleImageView
+import okhttp3.MediaType
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import org.json.JSONObject
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import java.io.File
 
 
 class IdentityVerificationActivity : AppCompatActivity() {
@@ -37,8 +46,9 @@ class IdentityVerificationActivity : AppCompatActivity() {
     var profileIV: CircleImageView? = null
     var enterFullName: EditText? = null
     var attachedIDCart: TextView? = null
-    var attachedIDSUCCESS: TextView? = null
+    var attachedIDSUCCESS: LinearLayout? = null
     var suceesFullView: CardView? = null
+    var deleteSelection:TextView?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,6 +56,7 @@ class IdentityVerificationActivity : AppCompatActivity() {
         Animation.setAnimation(this@IdentityVerificationActivity)
         intiView()
         setData()
+
     }
 
     private fun setData() {
@@ -53,7 +64,7 @@ class IdentityVerificationActivity : AppCompatActivity() {
         try{
             var details = JSONObject(App.instance!!.mPrefs!!.getString(StringUtils.signUpBundel, ""))
             enterFullName!!.setText(details.getString(StringUtils.go_fullName))
-            profileIV!!.setImageBitmap(convertBase64ToBitmap(details.getString(StringUtils.profilePicture)))
+           // profileIV!!.setImageBitmap(convertBase64ToBitmap(details.getString(StringUtils.profilePicture)))
             LocalModel.instance!!.cancelProgressDialog()
         }catch (E: java.lang.Exception){
             LocalModel.instance!!.cancelProgressDialog()
@@ -65,6 +76,7 @@ class IdentityVerificationActivity : AppCompatActivity() {
         profileIV = findViewById(R.id.profileIV)
         enterFullName = findViewById(R.id.enterFullName)
         attachedIDCart = findViewById(R.id.attachedIDCart)
+        deleteSelection = findViewById(R.id.deleteSelection)
         attachedIDSUCCESS = findViewById(R.id.attachedIDSUCCESS)
         suceesFullView = findViewById(R.id.suceesFullView)
     }
@@ -74,49 +86,102 @@ class IdentityVerificationActivity : AppCompatActivity() {
     }
 
     fun submitForApproval(view: View) {
-        LocalModel.instance!!.showProgressDialog(mActivity, "")
-        if (validation()) {
-            LocalModel.instance!!.cancelProgressDialog()
-            Constants.showDialog(mActivity,"Thank you "+JSONObject(App.instance!!.mPrefs!!.getString(StringUtils.signUpBundel,"")).getString(StringUtils.go_fullName) +" Your basic registration is done. Our team will verify your documents & will approve in 3 working days.",object :AlertTask{
-    override fun doInPositiveClick() {
+        hitRegestionApiCall(true);
+    }
 
-        suceesFullView!!.visibility=View.VISIBLE
+    fun hitRegestionApiCall(isVerified: Boolean){
+        try {
+            LocalModel.instance!!.showProgressDialog(mActivity, "")
+            if (validation()) {
+                try {
+                    if (bitmapID==null){
+                        bitmapID = BitmapFactory.decodeResource(applicationContext.getResources(),R.drawable.id_placeholder);
+                    }
+                } catch (e: Exception) {
+                }
 
 
-        val handler = Handler()
-        val runnable = Runnable {
-            finish()
-            val intent = Intent(mActivity, LoginActivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-            if (Build.VERSION.SDK_INT > 20) {
-                val options = ActivityOptions.makeSceneTransitionAnimation(mActivity)
-                startActivity(intent, options.toBundle())
-            } else {
-                startActivity(intent)
+                var details = JSONObject(App.instance!!.mPrefs!!.getString(StringUtils.signUpBundel, ""))
+                details.put(StringUtils.IDPicture,Constants.encodeImage(bitmapID!!))
+                var userType:String=""
+                if (details.getString(StringUtils.userRole).equals( StringUtils.I_am_Buyer)){
+                    userType = "1";
+                }else{
+                    userType = "2";
+                }
+
+                val builder = MultipartBody.Builder()
+                builder.setType(MultipartBody.FORM)
+                builder.addFormDataPart("name", details.getString(StringUtils.go_fullName))
+                builder.addFormDataPart("phoneNo", details.getString(StringUtils.go_phoneNo))
+                builder.addFormDataPart("profileVerified", isVerified.toString())
+                builder.addFormDataPart("email", details.getString(StringUtils.go_emailID))
+                builder.addFormDataPart("userType", userType)
+                builder.addFormDataPart("fcmToken", "16500215025")
+                builder.addFormDataPart("address_1", details.getString(StringUtils.go_address_1))
+                builder.addFormDataPart("address_2", details.getString(StringUtils.go_address_2))
+                builder.addFormDataPart("pincode", details.getString(StringUtils.go_Pincode))
+                builder.addFormDataPart("city", details.getString(StringUtils.go_city))
+                builder.addFormDataPart("state", details.getString(StringUtils.go_state))
+                builder.addFormDataPart("latitude", details.getString(StringUtils.go_latitude))
+                builder.addFormDataPart("longitude", details.getString(StringUtils.go_longitude))
+                builder.addFormDataPart("Password", details.getString(StringUtils.go_passWord))
+                val fileProfile = File(Constants.saveImagetoSDcard(convertBase64ToBitmap(details.getString(StringUtils.profilePicture))!!,this@IdentityVerificationActivity))
+                builder.addFormDataPart("profilePicture", fileProfile.getName(), RequestBody.create(
+                    MediaType.parse("multipart/form-data"), fileProfile))
+                val IDPicture = File(Constants.saveImagetoSDcard(bitmapID!!,this@IdentityVerificationActivity))
+                builder.addFormDataPart("IDPicture", fileProfile.getName(), RequestBody.create(
+                    MediaType.parse("multipart/form-data"), IDPicture))
+
+                LocalModel.instance!!.showProgressDialog(mActivity, "Loading..")
+                val requestCall: Call<CommonModel> = App.instance!!.apiInterface!!.Registration(builder.build())
+                requestCall.enqueue(object : Callback<CommonModel> {
+                    override fun onResponse(call: Call<CommonModel>, response: Response<CommonModel>) {
+                        if (response.body() != null) {
+                            LocalModel.instance!!.cancelProgressDialog()
+                            if (response.body()?.success.toString().trim().equals("1")){
+                                Constants.showDialog(mActivity,"Thank you "+JSONObject(App.instance!!.mPrefs!!.getString(StringUtils.signUpBundel,"")).getString(StringUtils.go_fullName) +"Your basic registration is done. Our team will verify your documents & will approve in 3 working days.",object :AlertTask{
+                                    override fun doInPositiveClick() {
+                                        suceesFullView!!.visibility=View.VISIBLE
+                                        val handler = Handler()
+                                        val runnable = Runnable {
+                                            finish()
+                                            val intent = Intent(mActivity, LoginActivity::class.java)
+                                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                                            if (Build.VERSION.SDK_INT > 20) {
+                                                val options = ActivityOptions.makeSceneTransitionAnimation(mActivity)
+                                                startActivity(intent, options.toBundle())
+                                            } else {
+                                                startActivity(intent)
+                                            }
+                                        }
+                                        handler.postDelayed(runnable, 3500)
+                                    }
+                                    override fun doInNegativeClick() {
+                                    }
+                                })
+
+                            }else{
+                                ToastUtils.shortToast("Registration Not Completed")
+                            }
+
+                        } else {
+                            LocalModel.instance!!.cancelProgressDialog()
+                        }
+                    }
+                    override fun onFailure(call: Call<CommonModel>, t: Throwable) {
+                        LocalModel.instance!!.cancelProgressDialog()
+
+
+                    }
+                })
+            }else{
+                LocalModel.instance!!.cancelProgressDialog()
             }
-        }
-        handler.postDelayed(runnable, 3500)
-    }
-
-    override fun doInNegativeClick() {
-
-    }
-
-})
-
-
-
-
-
-
-
-
-
-
-        }else{
-            LocalModel.instance!!.cancelProgressDialog()
+        } catch (e: Exception) {
         }
     }
+
 
     private fun validation(): Boolean {
        /* if (bitmap == null) {
@@ -173,6 +238,7 @@ class IdentityVerificationActivity : AppCompatActivity() {
                     bitmapID = BitmapFactory.decodeFile(image_uris[0].path, bmOptions)
                     attachedIDSUCCESS!!.visibility = View.VISIBLE
                     attachedIDCart!!.visibility = View.GONE
+                    profileIV!!.setImageBitmap(bitmapID)
                 }
             }
 
@@ -197,5 +263,18 @@ class IdentityVerificationActivity : AppCompatActivity() {
     private fun convertBase64ToBitmap(b64: String): Bitmap? {
         val imageAsBytes: ByteArray = Base64.decode(b64.toByteArray(), Base64.DEFAULT)
         return BitmapFactory.decodeByteArray(imageAsBytes, 0, imageAsBytes.size)
+    }
+
+    fun skipForNow(view: View) {
+        hitRegestionApiCall(false);
+    }
+
+    fun deleteIDProf(view: View) {
+
+        attachedIDSUCCESS!!.visibility = View.GONE
+        attachedIDCart!!.visibility = View.VISIBLE
+        profileIV!!.setImageBitmap(null)
+        bitmapID=null
+
     }
 }

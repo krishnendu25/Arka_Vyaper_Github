@@ -10,11 +10,195 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe53f83d-3b43-4510-a6c3-dc82c42df4d1" name="Default Changelist" comment="" />
+    <list default="true" id="fe53f83d-3b43-4510-a6c3-dc82c42df4d1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_ui_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_v4_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_media_media_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_slidingpanelayout_slidingpanelayout_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_swiperefreshlayout_swiperefreshlayout_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_daimajia_androidanimations_library_2_4_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_CaiJingLong_Android_CustomRatingBar__SNAPSHOT_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_aabhasr1_OtpView_v1_1_2_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_skyfishjy_ripplebackground_library_1_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_3_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_converter_gson_2_1_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_converter_scalars_2_1_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_retrofit_2_1_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/Model/BuyerLocationInMapModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/Model/MapUserFilter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/Model/MarketPriceModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/Model/ProductListing.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/Model/ReponseModel/AllSellerListApiModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/Model/ReponseModel/BannerApiModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/Model/ReponseModel/ByerLocation.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/Model/ReponseModel/MyProductListApi.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/Model/ReponseModel/SendOTP.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/Model/ReponseModel/UserDetails.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/Model/ReponseModel/VerifyOTP.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/Model/UserDetailsInfoMap.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/Utils/CurvedBottomNavigationView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/Adapter/HeaderBannerAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/Adapter/MarketPriceAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/Adapter/ProductAdapter/ProductListAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/Adapter/SellerBeyerLocation/MapFilterCallback.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/Adapter/SellerBeyerLocation/SellBYELocation.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/Adapter/SellerListDashboard/AllSellerList.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/Fragment/SellerDashBoard.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/MyProductListing.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/RequestToUserActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_blue_tag.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_call_buyer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_mapicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_sp_logo1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_sp_logo2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_sp_logo3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_sp_logo4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_blue_tag.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_call_buyer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_mapicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_sp_logo1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_sp_logo2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_sp_logo3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_sp_logo4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_blue_tag.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_call_buyer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_mapicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_sp_logo1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_sp_logo2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_sp_logo3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_sp_logo4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_blue_tag.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_call_buyer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_mapicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_seller_marker.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_sp_logo1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_sp_logo2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_sp_logo3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_sp_logo4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/bg_loc_select.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_blue_tag.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_call_buyer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_mapicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_sp_logo1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_sp_logo2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_sp_logo3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_sp_logo4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bg_loc_unselect.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/edittext_underline.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_003bell.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_add.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_star.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/id_placeholder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/otpbox_bg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_my_product_listing.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_request_to_user.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/child_banner_header.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/child_buyer_list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/child_product_listing.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/child_seller_byer.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_seller_dash_board.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/user_details_from_map.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/menudashboard.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/requirement.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/role_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_Temidtech_AndroidOtpCustomViewmaster_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_Temidtech_AndroidOtpCustomViewmaster_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_maps_android_android_maps_utils_0_5_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_maps_android_android_maps_utils_0_5_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_14_9_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_converter_gson_2_9_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_converter_scalars_2_3_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_retrofit_2_9_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/App.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/Constant/Constants.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/Constant/Constants.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/Model/CITY_MODEL.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/Model/Category_Model.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/Model/LoginModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/Model/ReponseModel/LoginModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/Model/Media_Model.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/Model/RegistationModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/Model/VideoUploadModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/Model/ReponseModel/CommonModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/ServiceMannager/ApiClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/ServiceMannager/ApiClient.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/ServiceMannager/ApiInterface.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/ServiceMannager/ApiInterface.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/ServiceMannager/URLConstants.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/ServiceMannager/URLConstants.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/Utils/StringUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/Utils/StringUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/Utils/Utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/Utils/Utils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/AdreessActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/AdreessActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/DashBoardActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/DashBoardActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/GetMyLocation.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/GetMyLocation.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/IdentityVerificationActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/IdentityVerificationActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/LoginActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/MobileNoVerification.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/MobileNoVerification.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/SignUP_1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/SignUP_1.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/WelcomePage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/WelcomePage.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_navi.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_navi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_navi.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_navi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_navi.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_navi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_navi.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_navi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_navi.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_navi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/dotted_broder.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/dotted_broder.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_splash.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_splash.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/menu_bg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/menu_bg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_adreess.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_adreess.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_choose_customer_type.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_choose_customer_type.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_dash_board.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_dash_board.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_get_my_location.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_get_my_location.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_identity_verification.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_identity_verification.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_mobile_no_verification.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_mobile_no_verification.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash__screen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash__screen.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_welcome_page.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_welcome_page.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/bottom_tab.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/bottom_tab.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/custom_dialog_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/custom_dialog_view.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/navigation_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/navigation_view.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/user_details_dashboard_card.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/user_details_dashboard_card.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/androidx/appcompat/group-index.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/androidx/cardview/group-index.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/androidx/constraintlayout/group-index.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/androidx/core/group-index.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/androidx/recyclerview/group-index.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/androidx/test/espresso/group-index.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/androidx/test/ext/group-index.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/com/android/support/group-index.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/com/google/android/gms/group-index.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/com/google/android/material/group-index.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/master-index.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/org/jetbrains/kotlin/group-index.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/sdk-registry.xml/sdk-registry.xml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,13 +233,13 @@
       <list>
         <option value="Interface" />
         <option value="Kotlin File" />
-        <option value="Kotlin Interface" />
         <option value="valueResourceFile" />
-        <option value="Class" />
-        <option value="layoutResourceFile" />
         <option value="layoutResourceFile_vertical" />
-        <option value="resourceFile" />
+        <option value="Class" />
+        <option value="Kotlin Interface" />
+        <option value="layoutResourceFile" />
         <option value="Kotlin Class" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -79,52 +263,61 @@
     <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ApkExportedModule" value="app" />
     <property name="DEBUGGABLE_DEVICE" value="xiaomi-redmi_note_7-836dc490" />
     <property name="DEBUGGABLE_PROCESS" value="com.arkavyapar" />
     <property name="DEBUGGER_ID" value="Auto" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="836dc490" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-03-20T13:37:17.574Z" />
     <property name="ExportApk.ApkPath" value="F:\AndroidStudioProjects_Krishnendu\GITHUB_PROJECT\FlyBy_Admin\app" />
     <property name="ExportApk.BuildVariants" value="release" />
     <property name="ExportApk.SignV1" value="true" />
     <property name="ExportApk.SignV2" value="true" />
     <property name="ResourceManagerPrefKey.ResourceType" value="DRAWABLE" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="algorithm" value="Scalr" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="destination" value="DRAWABLE" />
     <property name="format" value="PNG" />
-    <property name="lastFolderRoot" value="$USER_HOME$/Downloads/here_i_am.png" />
+    <property name="lastFolderRoot" value="$USER_HOME$/Downloads/svgtopng/ic_blue_tag.png" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/here_i_am.png" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Checklist.sqlite" />
     <property name="method" value="Automatic" />
-    <property name="resolutions" value="XXXHDPI&#10;XHDPI&#10;HDPI&#10;XXHDPI&#10;MDPI" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="resolutions" value="XXHDPI&#10;XXXHDPI&#10;MDPI&#10;XHDPI&#10;HDPI" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="sourceResolution" value="XXXHDPI" />
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.arkavyapar.Model.ReponseModel" />
+      <recent name="com.arkavyapar.View.Adapter.ProductAdapter" />
       <recent name="com.flybyadmin" />
       <recent name="com.cyberswift.appusekotlin.ServiceMannager" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="com.cyberswift.appusekotlin.Utils" />
     </key>
+    <key name="android.template.-1839703825">
+      <recent name="com.arkavyapar.View.UI" />
+    </key>
     <key name="android.template.-628612565">
       <recent name="com.flybyadmin.View.UI" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\AndroidStudioProjects_Krishnendu\GITHUB_PROJECT\Flyby_Admin\app\src\main\java\com\flybyadmin" />
     </key>
     <key name="android.template.1935978129">
       <recent name="com.arkavyapar.View.UI" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\AndroidStudioProjects_Krishnendu\GITHUB_PROJECT\Arka_Vyaper_Github\app\src\main\res\drawable" />
+      <recent name="F:\AndroidStudioProjects_Krishnendu\GITHUB_PROJECT\Arka_Vyaper_Github\app\src\main\res\drawable-xxxhdpi" />
+      <recent name="F:\AndroidStudioProjects_Krishnendu\GITHUB_PROJECT\Arka_Vyaper_Github\app\src\main\res\drawable-xxhdpi" />
+      <recent name="F:\AndroidStudioProjects_Krishnendu\GITHUB_PROJECT\Arka_Vyaper_Github\app\src\main\res\drawable-xhdpi" />
       <recent name="F:\AndroidStudioProjects_Krishnendu\GITHUB_PROJECT\Arka_Vyaper\app\src\main\res\font" />
-      <recent name="F:\AndroidStudioProjects_Krishnendu\GITHUB_PROJECT\Arka_Vyaper\app\src\main\res\drawable" />
-      <recent name="F:\AndroidStudioProjects_Krishnendu\GITHUB_PROJECT\FlyBy_Admin\app" />
-      <recent name="F:\AndroidStudioProjects_Krishnendu\GITHUB_PROJECT\Flyby_Admin\app\src\main\res" />
-      <recent name="F:\AndroidStudioProjects_Krishnendu\GITHUB_PROJECT\Flyby_Admin\app\src\main\res\drawable-xxxhdpi" />
+    </key>
+    <key name="android.template.674132939">
+      <recent name="com.arkavyapar.View.UI" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.flybyadmin.Utils.Loader" />
@@ -132,6 +325,12 @@
       <recent name="com.flybyadmin.View.Adapter" />
       <recent name="com.flybyadmin.Utils" />
       <recent name="com.cyberswift.appusekotlin.Constant" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\AndroidStudioProjects_Krishnendu\GITHUB_PROJECT\Flyby_Admin\app\src\main\java\com\flybyadmin" />
+    </key>
+    <key name="android.template.-1256944312">
+      <recent name="com.arkavyapar.View.UI" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -151,7 +350,7 @@
       <option name="PM_INSTALL_OPTIONS" value="" />
       <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="default_activity" />
+      <option name="MODE" value="specific_activity" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
@@ -188,7 +387,7 @@
         <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
+      <option name="ACTIVITY_CLASS" value="com.arkavyapar.View.UI.Splash_Screen" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
@@ -236,163 +435,243 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614489114406">
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616081890434">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1614489114406" />
-    <state x="513" y="89" key="#com.intellij.ide.util.MemberChooser" timestamp="1614524711945">
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1616081890434" />
+    <state x="428" y="167" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1616302591407">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="513" y="89" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1614524711945" />
-    <state x="721" y="127" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607408997010" />
-    <state x="448" y="144" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613836724695">
+    <state x="428" y="167" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1616302591407" />
+    <state x="513" y="89" key="#com.intellij.ide.util.MemberChooser" timestamp="1615830112292">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="448" y="144" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1613836724695" />
+    <state x="513" y="89" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1615830112292" />
+    <state x="412" y="148" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1616081887202">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="412" y="148" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1616081887202" />
+    <state x="448" y="144" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1616217880471">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="448" y="144" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1616217880471" />
     <state x="629" y="206" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607507359222" />
-    <state x="490" y="53" width="615" height="860" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1611850543209">
+    <state x="490" y="53" width="477" height="675" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1615699657512">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="490" y="53" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1611850543209" />
-    <state x="689" y="90" width="615" height="860" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607432731956" />
-    <state x="438" y="67" key="#xdebugger.evaluate" timestamp="1614520287417">
+    <state x="490" y="53" width="477" height="675" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1615699657512" />
+    <state x="580" y="137" width="786" height="591" key="#xdebugger.evaluate" timestamp="1616219715568">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="438" y="67" key="#xdebugger.evaluate/0.0.1366.728@0.0.1366.728" timestamp="1614520287417" />
+    <state x="580" y="137" width="786" height="591" key="#xdebugger.evaluate/0.0.1366.728@0.0.1366.728" timestamp="1616219715568" />
     <state x="429" y="256" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1612369276789">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="429" y="256" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728@0.0.1366.728" timestamp="1612369276789" />
-    <state x="263" y="119" key="AndroidCreateResourceFileDialog" timestamp="1614478851759">
+    <state x="263" y="119" width="840" height="486" key="AndroidCreateResourceFileDialog" timestamp="1616248383907">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="263" y="119" key="AndroidCreateResourceFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1614478851759" />
-    <state x="931" y="240" key="AndroidCreateXmlResourceDialog" timestamp="1614496977052">
+    <state x="263" y="119" width="840" height="486" key="AndroidCreateResourceFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1616248383907" />
+    <state x="931" y="240" key="AndroidCreateXmlResourceDialog" timestamp="1615738423922">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="931" y="240" key="AndroidCreateXmlResourceDialog/0.0.1366.728@0.0.1366.728" timestamp="1614496977052" />
-    <state x="538" y="129" key="AndroidProcessChooserDialog" timestamp="1614524987611">
+    <state x="931" y="240" key="AndroidCreateXmlResourceDialog/0.0.1366.728@0.0.1366.728" timestamp="1615738423922" />
+    <state x="538" y="129" key="AndroidProcessChooserDialog" timestamp="1616226460886">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="538" y="129" key="AndroidProcessChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1614524987611" />
-    <state width="444" height="466" key="DebuggerActiveHint" timestamp="1613751549059">
+    <state x="538" y="129" key="AndroidProcessChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1616226460886" />
+    <state width="521" height="466" key="DebuggerActiveHint" timestamp="1616218497099">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="444" height="466" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1613751549059" />
-    <state x="491" y="152" key="FileChooserDialogImpl" timestamp="1614518069537">
+    <state width="521" height="466" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1616218497099" />
+    <state x="491" y="152" key="FileChooserDialogImpl" timestamp="1616302606023">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="491" y="152" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1614518069537" />
+    <state x="491" y="152" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1616302606023" />
     <state x="690" y="217" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1608266086325" />
-    <state width="1323" height="144" key="GridCell.Tab.0.bottom" timestamp="1614525970418">
+    <state width="1323" height="130" key="GridCell.Tab.0.bottom" timestamp="1616226616284">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="144" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1614525970418" />
-    <state width="1323" height="144" key="GridCell.Tab.0.center" timestamp="1614525970418">
+    <state width="1323" height="130" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1616226616284" />
+    <state width="1323" height="130" key="GridCell.Tab.0.center" timestamp="1616226616283">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="144" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1614525970418" />
-    <state width="1323" height="144" key="GridCell.Tab.0.left" timestamp="1614525970418">
+    <state width="1323" height="130" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1616226616283" />
+    <state width="1323" height="130" key="GridCell.Tab.0.left" timestamp="1616226616283">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="144" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1614525970418" />
-    <state width="1323" height="144" key="GridCell.Tab.0.right" timestamp="1614525970418">
+    <state width="1323" height="130" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1616226616283" />
+    <state width="1323" height="130" key="GridCell.Tab.0.right" timestamp="1616226616283">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="144" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1614525970418" />
-    <state width="1323" height="144" key="GridCell.Tab.1.bottom" timestamp="1614525970419">
+    <state width="1323" height="130" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1616226616283" />
+    <state width="1323" height="130" key="GridCell.Tab.1.bottom" timestamp="1616226616284">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="144" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1614525970419" />
-    <state width="1323" height="144" key="GridCell.Tab.1.center" timestamp="1614525970418">
+    <state width="1323" height="130" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1616226616284" />
+    <state width="1323" height="130" key="GridCell.Tab.1.center" timestamp="1616226616284">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="144" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1614525970418" />
-    <state width="1323" height="144" key="GridCell.Tab.1.left" timestamp="1614525970418">
+    <state width="1323" height="130" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1616226616284" />
+    <state width="1323" height="130" key="GridCell.Tab.1.left" timestamp="1616226616284">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="144" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1614525970418" />
-    <state width="1323" height="144" key="GridCell.Tab.1.right" timestamp="1614525970418">
+    <state width="1323" height="130" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1616226616284" />
+    <state width="1323" height="130" key="GridCell.Tab.1.right" timestamp="1616226616284">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="144" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1614525970418" />
-    <state x="184" y="6" key="SettingsEditor" timestamp="1614516839279">
+    <state width="1323" height="130" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1616226616284" />
+    <state x="184" y="6" key="SettingsEditor" timestamp="1615647656725">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1614516839279" />
-    <state width="691" height="372" key="XDebugger.FullValuePopup" timestamp="1612072201292">
+    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1615647656725" />
+    <state width="691" height="372" key="XDebugger.FullValuePopup" timestamp="1615711780327">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="691" height="372" key="XDebugger.FullValuePopup/0.0.1366.728@0.0.1366.728" timestamp="1612072201292" />
-    <state x="499" y="142" key="chooseDestDirectoryDialog" timestamp="1613497157390">
+    <state width="691" height="372" key="XDebugger.FullValuePopup/0.0.1366.728@0.0.1366.728" timestamp="1615711780327" />
+    <state x="499" y="142" key="chooseDestDirectoryDialog" timestamp="1616172481874">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="499" y="142" key="chooseDestDirectoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1613497157390" />
-    <state x="380" y="97" width="720" height="534" key="find.popup" timestamp="1614496245223">
+    <state x="499" y="142" key="chooseDestDirectoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1616172481874" />
+    <state x="227" y="100" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1616173770633">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="380" y="97" width="720" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1614496245223" />
-    <state x="424" y="6" key="refactoring.ChangeSignatureDialog" timestamp="1614517695261">
+    <state x="227" y="100" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.728@0.0.1366.728" timestamp="1616173770633" />
+    <state x="380" y="97" width="720" height="534" key="find.popup" timestamp="1615714795178">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="424" y="6" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1614517695261" />
+    <state x="380" y="97" width="720" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1615714795178" />
+    <state x="424" y="6" key="refactoring.ChangeSignatureDialog" timestamp="1616225694017">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="424" y="6" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1616225694017" />
     <state x="339" y="162" width="672" height="677" key="run.anything.popup" timestamp="1614516859330">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1614516859330" />
-    <state x="383" y="4" width="672" height="724" key="search.everywhere.popup" timestamp="1614523822627">
+    <state x="383" y="4" width="672" height="724" key="search.everywhere.popup" timestamp="1616245750006">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="383" y="4" width="672" height="724" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1614523822627" />
+    <state x="383" y="4" width="672" height="724" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1616245750006" />
     <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608035468748" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+        <line-breakpoint suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/OnBoarding_Step_4.kt</url>
           <line>305</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+        <line-breakpoint suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/OnBoarding_Step_4.kt</url>
           <line>298</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/WelcomePage.kt</url>
-          <line>18</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+        <line-breakpoint suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/SignUP_1.kt</url>
-          <line>138</line>
+          <line>146</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+        <line-breakpoint suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/SignUP_1.kt</url>
-          <line>136</line>
+          <line>144</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+        <line-breakpoint suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/IdentityVerificationActivity.kt</url>
-          <line>72</line>
+          <line>84</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+        <line-breakpoint suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/DashBoardActivity.kt</url>
-          <line>261</line>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/DashBoardActivity.kt</url>
-          <line>178</line>
+          <line>325</line>
           <option name="timeStamp" value="43" />
         </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/DashBoardActivity.kt</url>
+          <line>330</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/IdentityVerificationActivity.kt</url>
+          <line>89</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/IdentityVerificationActivity.kt</url>
+          <line>88</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/LoginActivity.kt</url>
+          <line>92</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/DashBoardActivity.kt</url>
+          <line>446</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/DashBoardActivity.kt</url>
+          <line>511</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/MyProductListing.kt</url>
+          <line>241</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/MyProductListing.kt</url>
+          <line>227</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/MyProductListing.kt</url>
+          <line>288</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/DashBoardActivity.kt</url>
+          <line>776</line>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/DashBoardActivity.kt</url>
+          <line>463</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/Fragment/SellerDashBoard.kt</url>
+          <line>48</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/Fragment/SellerDashBoard.kt</url>
+          <line>49</line>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/Fragment/SellerDashBoard.kt</url>
+          <line>192</line>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/Fragment/SellerDashBoard.kt</url>
+          <line>173</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/DashBoardActivity.kt</url>
-          <line>183</line>
-          <option name="timeStamp" value="44" />
+          <line>271</line>
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/arkavyapar/View/UI/DashBoardActivity.kt</url>
+          <line>287</line>
+          <option name="timeStamp" value="100" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

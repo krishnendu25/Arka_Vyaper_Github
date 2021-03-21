@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:id="@+id/rootView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/padding_10"
+    android:background="@drawable/bg_loc_unselect"
+    >
+    <TextView
+        android:id="@+id/detailsInfoTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center|start"
+        android:paddingStart="@dimen/padding_15"
+        android:paddingEnd="@dimen/padding_15"
+        android:paddingTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppinsregular"/>
+
+</RelativeLayout>

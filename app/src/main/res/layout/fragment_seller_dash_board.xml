@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFEF"
+    tools:context=".View.UI.Fragment.SellerDashBoard">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EFEFEF"
+        android:scrollbars="none"
+        android:scrollbarThumbHorizontal="@color/transparent"
+        android:scrollbarThumbVertical="@color/transparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dimen_70dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/headBanerList"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="@dimen/padding_10"
+                    android:scrollbars="none" />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Today’s Market Rate"
+                        android:textColor="#6B3024"
+                        android:layout_centerVertical="true"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/poppins_bold"/>
+
+                    <TextView
+                        android:id="@+id/viewAllRate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/view_all"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="#1A50A5"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/poppinsregular"/>
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/marketPriceList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:scrollbars="none" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/buyerRequestView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:visibility="gone"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Buying Requests"
+                            android:textColor="#6B3024"
+                            android:layout_centerVertical="true"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/poppins_bold"/>
+
+                        <TextView
+                            android:id="@+id/viewFilter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Filter"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
+                            android:textColor="#1A50A5"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/poppinsregular"/>
+                    </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/buyerRequestList"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:paddingBottom="150dp"
+                                android:scrollbars="none" />
+                            <TextView
+                                android:id="@+id/emptyView_buyerRequestList"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="60dp"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="#6B3024"
+                                android:fontFamily="@font/poppinsregular"
+                                android:textSize="@dimen/dimen_16dp"
+                                android:text="@string/no_buying_requests_found"/>
+                        </RelativeLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/sellerProductViewView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Available Seller Near Your Location"
+                            android:textColor="#6B3024"
+                            android:layout_centerVertical="true"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/poppins_bold"/>
+
+                        <TextView
+                            android:id="@+id/viewFilterSeller"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Filter"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
+                            android:textColor="#1A50A5"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/poppinsregular"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/sellerProductList"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="150dp"
+                            android:layout_marginTop="10dp"
+                            android:scrollbars="none" />
+                        <TextView
+                        android:id="@+id/emptyView_sellerProductList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#6B3024"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textSize="@dimen/dimen_16dp"
+                        android:text="@string/no_seller_found"/>
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

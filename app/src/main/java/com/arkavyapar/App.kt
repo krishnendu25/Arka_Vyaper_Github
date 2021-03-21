@@ -5,6 +5,7 @@ import android.content.Context
 import android.os.Process
 import androidx.multidex.MultiDex
 import com.arkavyapar.Utils.Prefs
+import com.arkavyapar.Utils.StringUtils
 import com.arkavyapar.hoori.controller.ApiClient
 import com.arkavyapar.hoori.controller.ApiInterface
 import com.google.android.gms.location.FusedLocationProviderClient
@@ -13,6 +14,7 @@ import java.io.IOException
 
 
 class App : Application() {
+
     public var apiInterface: ApiInterface? = null
     public var mPrefs: Prefs?=null
     public var mFusedLocationProviderClient: FusedLocationProviderClient? = null
@@ -33,6 +35,7 @@ class App : Application() {
         instance = this
         mPrefs= Prefs(instance!!)
         mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+
     }
 
     override fun attachBaseContext(base: Context) {

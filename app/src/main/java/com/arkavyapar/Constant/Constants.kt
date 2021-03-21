@@ -17,17 +17,21 @@ import android.provider.MediaStore
 import android.provider.Settings
 import android.text.ClipboardManager
 import android.text.TextUtils
+import android.util.Base64
 import android.util.Patterns
 import android.view.View
 import android.view.Window
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.arkavyapar.App
 import com.arkavyapar.Model.AddressModel
 import com.arkavyapar.R
 import com.arkavyapar.View.Interface.AlertTask
 import com.google.android.gms.maps.model.LatLng
 import org.json.JSONObject
+import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
@@ -46,6 +50,21 @@ class Constants {
         fun getCurrentUnixTimeStamps(): String? {
             return TimeUnit.MILLISECONDS.toSeconds(System.currentTimeMillis())
                 .toString()
+        }
+        fun setLayoutManager(
+            recyclerView: RecyclerView,
+            HORIZONTAL: Boolean,
+            VERTICAL: Boolean
+        ): LinearLayoutManager? {
+            var linearLayoutManager: LinearLayoutManager? = null
+            if (HORIZONTAL) {
+                linearLayoutManager =
+                    LinearLayoutManager(App.instance, LinearLayoutManager.HORIZONTAL, false)
+                recyclerView.layoutManager = linearLayoutManager
+            } else if (VERTICAL) linearLayoutManager =
+                LinearLayoutManager(App.instance, LinearLayoutManager.VERTICAL, false)
+            run { recyclerView.layoutManager = linearLayoutManager }
+            return linearLayoutManager
         }
 
         fun getTimeStampTODateString(timeStamp: String?, Sign: String?): String? {
@@ -107,7 +126,7 @@ class Constants {
             }
         }
 
-        fun showDialog(activity: Activity?, msg: String?,alertTask: AlertTask) {
+        fun showDialog(activity: Activity?, msg: String?, alertTask: AlertTask) {
             val dialog = Dialog(activity!!)
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
             dialog.setCancelable(false)
@@ -155,7 +174,12 @@ class Constants {
             alertDialog.setCanceledOnTouchOutside(false)
             alertDialog.show()
         }
-
+        fun encodeImage(bm: Bitmap): String? {
+            val baos = ByteArrayOutputStream()
+            bm.compress(Bitmap.CompressFormat.JPEG, 100, baos)
+            val b = baos.toByteArray()
+            return Base64.encodeToString(b, Base64.DEFAULT)
+        }
         fun showImageTakeDialog(mActivity: Activity) {
 
 
@@ -466,10 +490,11 @@ class Constants {
             val state: String = addresses[0].getAdminArea()
             val country: String = addresses[0].getCountryName()
             val postalCode: String = addresses[0].getPostalCode()
-            val knownName: String = addresses[0].getFeatureName()
+            val knownName: String = addresses[0].subLocality
 
             var json = JSONObject()
             json.put("address", address)
+            json.put("knownName", knownName)
             json.put("city", city)
             json.put("state", state)
             json.put("country", country)

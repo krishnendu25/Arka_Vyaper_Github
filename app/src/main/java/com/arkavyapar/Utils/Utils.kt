@@ -15,7 +15,8 @@ import android.os.Environment
 import android.provider.Settings
 import android.telephony.SubscriptionManager
 import android.telephony.TelephonyManager
-import android.text.*
+import android.text.Html
+import android.text.TextUtils
 import android.text.format.DateFormat
 import android.util.DisplayMetrics
 import android.util.Log
@@ -23,12 +24,16 @@ import android.util.TypedValue
 import android.view.Gravity
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
 import androidx.core.content.FileProvider
 import com.arkavyapar.BuildConfig
 import com.arkavyapar.Constant.Constants
+import com.arkavyapar.R
+import com.bumptech.glide.Glide
+import com.daimajia.androidanimations.library.Techniques
+import com.daimajia.androidanimations.library.YoYo
 import com.google.android.gms.maps.model.LatLng
 import com.google.maps.android.SphericalUtil
 import org.json.JSONArray
@@ -40,7 +45,12 @@ import java.util.*
 class Utils {
 
     companion object {
-
+        fun runAnimation(view: View, tada: Techniques, durartion: Long){
+            YoYo.with(tada)
+                .duration(durartion)
+                .repeat(1)
+                .playOn(view);
+        }
     /**
      * Calculate distance between 2 lat lng points
      */
@@ -50,7 +60,36 @@ class Utils {
         } else SphericalUtil.computeDistanceBetween(point1, point2)
     }// To be safe, you should check that the SDCard is mounted
     // using Environment.getExternalStorageState() before doing this.
+    open fun toTitleCase(string: String?): String? {
 
+        // Check if String is null
+        if (string == null) {
+            return null
+        }
+        var whiteSpace = true
+        val builder = java.lang.StringBuilder(string) // String builder to store string
+        val builderLength = builder.length
+
+        // Loop through builder
+        for (i in 0 until builderLength) {
+            val c = builder[i] // Get character at builders position
+            if (whiteSpace) {
+
+                // Check if character is not white space
+                if (!Character.isWhitespace(c)) {
+
+                    // Convert to title case and leave whitespace mode.
+                    builder.setCharAt(i, Character.toTitleCase(c))
+                    whiteSpace = false
+                }
+            } else if (Character.isWhitespace(c)) {
+                whiteSpace = true // Set character is white space
+            } else {
+                builder.setCharAt(i, Character.toLowerCase(c)) // Set character to lowercase
+            }
+        }
+        return builder.toString() // Return builders text
+    }
     // This location works best if you want the created images to be shared
     // between applications and persist after your app has been uninstalled.
 
@@ -104,14 +143,9 @@ class Utils {
          * launch a new activity and finish current activity
          */
         fun launchActivityWithFinish(context: Activity, destinationClass: Class<*>?) {
-            val i = Intent(context, destinationClass)
-           i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            if (Build.VERSION.SDK_INT > 20) {
-                val options = ActivityOptions.makeSceneTransitionAnimation(context )
-                context.startActivity(i, options.toBundle())
-            } else {
-                context.startActivity(i)
-            }
+            val intent = Intent(context, destinationClass)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+            context.startActivity(intent)
             (context as Activity).finish()
         }
 
@@ -417,6 +451,17 @@ class Utils {
             val randNumber = (1 + r.nextInt(2)) * 10000 + r.nextInt(10000)
             return randNumber.toString()
         }
+
+        public fun setImageFromUrl(view: ImageView, url: String, context: Context){
+            Glide
+                .with(context)
+                .load(url)
+                .centerCrop()
+                .placeholder(R.drawable.ic_placeholder)
+                .into(view);
+        }
+
+
 
         /**
          * Returns the consumer friendly device name

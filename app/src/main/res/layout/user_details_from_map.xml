@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/transparent"
+        android:layout_marginEnd="@dimen/padding_10"
+        app:cardCornerRadius="2dp">
+        <ImageView
+            android:id="@+id/card_closeDialog"
+            android:layout_width="@dimen/dimen_30dp"
+            android:layout_height="@dimen/dimen_30dp"
+            android:layout_gravity="end"
+            android:src="@drawable/ic_remove_doc"/>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5">
+
+                <ImageView
+                    android:id="@+id/card_profilePictureIV"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3.5">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/card_userName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textColor="#2B2B2B"
+                        android:textSize="@dimen/dimen_20dp" />
+
+                    <TextView
+                        android:id="@+id/card_addressTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:layout_marginTop="@dimen/padding_5"
+                        android:textColor="#2B2B2B"
+                        android:textSize="@dimen/dimen_12dp" />
+
+                    <TextView
+                        android:id="@+id/card_UserRoal"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_5"
+                        android:textColor="#2B2B2B"
+                        android:textSize="@dimen/dimen_12dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_40dp">
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="horizontal">
+
+                            <com.kikt.view.CustomRatingBar
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:currentStar="3.5"
+                                app:fullStar="@drawable/ic_baseline_star"
+                                app:maxStar="5"
+                                app:starHeight="@dimen/padding_15"
+                                app:starWidth="@dimen/padding_10"
+                                app:minStar="0.5"
+                                app:padding="3dp"/>
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/card_callUser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/padding_10"
+                            android:background="@drawable/green_btn_ripple"
+                            android:drawableStart="@drawable/ic_call_buyer"
+                            android:drawablePadding="@dimen/padding_5"
+                            android:fontFamily="@font/poppins_bold"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:paddingStart="@dimen/padding_5"
+                            android:paddingEnd="@dimen/padding_5"
+                            android:text="Call Now"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dimen_12dp" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

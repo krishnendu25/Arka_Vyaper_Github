@@ -57,6 +57,7 @@
                         android:orientation="horizontal">
 
                         <ImageView
+                            android:id="@+id/openMapViewLocation"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
@@ -75,6 +76,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:id="@+id/searchView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -157,13 +159,41 @@
                     android:orientation="horizontal"
                     android:layout_width="match_parent">
 
-                    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-                        xmlns:tools="http://schemas.android.com/tools"
-                        android:id="@+id/map"
-                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                    <RelativeLayout
+                        android:id="@+id/container_map"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        tools:context=".MapsActivity" />
+                        android:layout_height="match_parent">
+
+
+
+                        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:tools="http://schemas.android.com/tools"
+                            android:id="@+id/map"
+                            android:name="com.google.android.gms.maps.SupportMapFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:context=".MapsActivity" />
+                        <RelativeLayout
+                            android:id="@+id/markerInfoWindow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:visibility="gone"
+                            android:layout_margin="@dimen/padding_10">
+                            <include
+                                layout="@layout/user_details_from_map"/>
+                        </RelativeLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/userCountList"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_40dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="110dp"/>
+
+                    </RelativeLayout>
+
                 </LinearLayout>
 
 
@@ -186,6 +216,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="120dp"
+            android:background="@color/transparent"
             android:layout_marginStart="@dimen/dimen_20dp"
             android:layout_marginEnd="@dimen/dimen_20dp"
             >
@@ -206,6 +237,7 @@
         android:id="@+id/side_nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:visibility="visible"
         android:layout_gravity="start"
         android:background="@color/transparent"
       >

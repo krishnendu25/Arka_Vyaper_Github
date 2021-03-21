@@ -2,17 +2,18 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="130dp"
+    android:layout_height="110dp"
     android:id="@+id/floatingCardView"
     app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="5dp"
-    app:cardElevation="@dimen/padding_10">
+    app:cardElevation="@dimen/dimen_0dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <ImageView
+            android:id="@+id/card_tag"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -33,7 +34,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Hello!"
-                    android:textSize="@dimen/dimen_25dp"
+                    android:textSize="@dimen/dimen_20dp"
                     android:textColor="#6B3024"
                     android:fontFamily="@font/poppins_bold"
                     android:layout_gravity="bottom"
@@ -79,11 +80,12 @@
                             android:layout_width="80dp"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
                             android:textSize="@dimen/dimen_16dp"
                             android:fontFamily="@font/poppins_bold"
                             android:textColor="#6B3024"
+                            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
                             android:singleLine="true"/>
+                        <!---->
                     </LinearLayout>
 
                 </LinearLayout>

@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.provider.Settings
 import android.view.View
 import com.arkavyapar.Constant.Animation
+import com.arkavyapar.Constant.Animation.obj.setAnimation
 import com.arkavyapar.R
 import com.arkavyapar.Utils.ToastUtils
 import com.arkavyapar.Utils.Utils

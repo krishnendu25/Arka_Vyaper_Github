@@ -43,7 +43,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppinsregular"
-                    android:text="sent to (008) 8990 899890"
                     android:textColor="#606060"
                     android:layout_marginTop="@dimen/dimen_20dp"
                     android:textSize="@dimen/dimen_18dp" />
@@ -55,28 +54,20 @@
                    android:gravity="center"
                     android:layout_marginTop="@dimen/dimen_20dp">
 
-                    <com.swiftsynq.otpcustomview.CustomOtpView
+                    <in.aabhasjindal.otptextview.OtpTextView
                         android:id="@+id/otpView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:cursorVisible="true"
-                        app:cursorColor="#555555"
-                        app:cursorWidth="2dp"
-                        app:itemCount="4"
-                        app:itemHeight="75dp"
-                        android:hint="xxxx"
-                        app:itemRadius="@dimen/padding_10"
-                        app:itemSpacing="@dimen/padding_10"
-                        app:itemWidth="76dp"
-                        android:inputType="text"
-                        android:fontFamily="@font/arialbold"
-                        android:padding="@dimen/dimen_20dp"
-                        android:textColor="#555555"
-                        android:textSize="@dimen/dimen_50dp"
-                        app:lineColor="#ED8C70"
-                        app:lineWidth="3dp"
-                        app:viewType="rectangle" />
-
+                        android:textColor="#E67656"
+                        android:visibility="visible"
+                        app:otp_box_background="@drawable/otpbox_bg"
+                        app:width="?actionBarSize"
+                        app:height="?actionBarSize"
+                        app:bar_enabled="false"
+                        app:bar_height="2dp"
+                        app:length="4"
+                        app:box_margin_right="15dp"
+                        app:otp_text_size="24dp"/>
                 </LinearLayout>
 
                 </LinearLayout>
