@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "139098312185",
+    "project_id": "arka-vyapar-16c19",
+    "storage_bucket": "arka-vyapar-16c19.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139098312185:android:bf56f9990e4849af6f8128",
+        "android_client_info": {
+          "package_name": "com.arkavyapar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "139098312185-8mgtrv1i9qanh4smhut4u11420ls7tv9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2Tqp8iL15kkUGkJlLxLtNBUgNJVmNllY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "139098312185-8mgtrv1i9qanh4smhut4u11420ls7tv9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

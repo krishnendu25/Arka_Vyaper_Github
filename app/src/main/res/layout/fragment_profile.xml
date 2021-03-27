@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".View.UI.Fragment.ProfileFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|top"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileIV"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="100dp"
+                android:src="@drawable/ic_selectchoose_profile"
+                app:civ_border_color="#ed8c70"
+                app:civ_border_width="@dimen/padding_5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dimen_25dp"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:layout_marginEnd="@dimen/dimen_25dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/fullNameED"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:hint="@string/full_name"
+                    android:textSize="@dimen/dimen_14sp"
+                    android:inputType="textPersonName"
+                    android:paddingStart="@dimen/padding_10"
+                    android:paddingEnd="@dimen/padding_10"
+                    android:textColor="#707070"
+                    android:textColorHint="#707070"
+                    app:backgroundTint="#707070" />
+
+                <EditText
+                    android:id="@+id/mobileED"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:textSize="@dimen/dimen_14sp"
+                    android:alpha="0.6"
+                    android:enabled="false"
+                    android:editable="false"
+                    android:fontFamily="@font/poppinsregular"
+                    android:hint="@string/mobile"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:paddingStart="@dimen/padding_10"
+                    android:paddingEnd="@dimen/padding_10"
+                    android:textColor="#707070"
+                    android:textColorHint="#707070"
+                    app:backgroundTint="#707070" />
+
+                <EditText
+                    android:id="@+id/emailED"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textSize="@dimen/dimen_14sp"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:fontFamily="@font/poppinsregular"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="@dimen/padding_10"
+                    android:paddingEnd="@dimen/padding_10"
+                    android:textColor="#707070"
+                    android:textColorHint="#707070"
+                    app:backgroundTint="#707070" />
+
+                <TextView
+                    android:id="@+id/catagoryDD"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:background="@drawable/edittext_underline"
+                    android:drawableEnd="@drawable/ic_down"
+                    android:drawableTint="#AAAAAA"
+                    android:fontFamily="@font/poppinsregular"
+                    android:gravity="center|start"
+                    android:hint="Select UserType"
+                    android:paddingStart="@dimen/padding_10"
+                    android:paddingEnd="@dimen/padding_10"
+                    android:singleLine="true"
+                    android:textColor="#AAAAAA"
+                    android:textColorHint="#AAAAAA"
+                    android:textSize="@dimen/dimen_14sp" />
+
+                <EditText
+                    android:id="@+id/address1Tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:fontFamily="@font/poppinsregular"
+                    android:hint="Address line 1"
+                    android:inputType="textPostalAddress"
+                    android:paddingStart="@dimen/padding_10"
+                    android:paddingEnd="@dimen/padding_10"
+                    android:textColor="#707070"
+                    android:textSize="@dimen/dimen_14sp"
+                    android:textColorHint="#707070"
+                    app:backgroundTint="#707070" />
+
+                <EditText
+                    android:id="@+id/address2Tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textSize="@dimen/dimen_14sp"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:fontFamily="@font/poppinsregular"
+                    android:hint="Address line 2"
+                    android:inputType="textPostalAddress"
+                    android:paddingStart="@dimen/padding_10"
+                    android:paddingEnd="@dimen/padding_10"
+                    android:textColor="#707070"
+                    android:textColorHint="#707070"
+                    app:backgroundTint="#707070" />
+
+                <EditText
+                    android:id="@+id/pincodeTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:textSize="@dimen/dimen_14sp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:hint="Pincode"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:paddingStart="@dimen/padding_10"
+                    android:paddingEnd="@dimen/padding_10"
+                    android:textColor="#707070"
+                    android:textColorHint="#707070"
+                    app:backgroundTint="#707070" />
+
+                <EditText
+                    android:id="@+id/cityTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:fontFamily="@font/poppinsregular"
+                    android:hint="City"
+                    android:textSize="@dimen/dimen_14sp"
+                    android:inputType="textPostalAddress"
+                    android:paddingStart="@dimen/padding_10"
+                    android:paddingEnd="@dimen/padding_10"
+                    android:textColor="#707070"
+                    android:textColorHint="#707070"
+                    app:backgroundTint="#707070" />
+
+                <EditText
+                    android:id="@+id/StateTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textSize="@dimen/dimen_14sp"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:fontFamily="@font/poppinsregular"
+                    android:hint="State"
+                    android:inputType="textPostalAddress"
+                    android:paddingStart="@dimen/padding_10"
+                    android:paddingEnd="@dimen/padding_10"
+                    android:textColor="#707070"
+                    android:textColorHint="#707070"
+                    app:backgroundTint="#707070" />
+
+                <TextView
+                    android:id="@+id/saveProfileDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/green_btn_ripple"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:gravity="center"
+                    android:layout_marginBottom="200dp"
+                    android:paddingStart="@dimen/dimen_20dp"
+                    android:paddingEnd="@dimen/dimen_20dp"
+                    android:text="Update Details"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_16dp"
+
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

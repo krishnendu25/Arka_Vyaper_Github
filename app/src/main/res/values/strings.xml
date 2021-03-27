@@ -49,4 +49,9 @@
     <string name="view_all"><u>VIEW ALL</u></string>
     <string name="no_buying_requests_found"><u>No Buying Requests Found</u></string>
     <string name="no_seller_found"><u>No Seller Found</u></string>
+    <string name="for_reselling">For Reselling</string>
+    <string name="for_business_use">For Business Use</string>
+    <string name="for_home_use">For Home Use</string>
+    <string name="requests_list">Requests List</string>
+    <string name="call_now">Call Now</string>
 </resources>

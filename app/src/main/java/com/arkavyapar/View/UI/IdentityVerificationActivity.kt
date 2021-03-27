@@ -46,6 +46,7 @@ class IdentityVerificationActivity : AppCompatActivity() {
     var profileIV: CircleImageView? = null
     var enterFullName: EditText? = null
     var attachedIDCart: TextView? = null
+
     var attachedIDSUCCESS: LinearLayout? = null
     var suceesFullView: CardView? = null
     var deleteSelection:TextView?=null
@@ -109,7 +110,6 @@ class IdentityVerificationActivity : AppCompatActivity() {
                 }else{
                     userType = "2";
                 }
-
                 val builder = MultipartBody.Builder()
                 builder.setType(MultipartBody.FORM)
                 builder.addFormDataPart("name", details.getString(StringUtils.go_fullName))
@@ -117,7 +117,8 @@ class IdentityVerificationActivity : AppCompatActivity() {
                 builder.addFormDataPart("profileVerified", isVerified.toString())
                 builder.addFormDataPart("email", details.getString(StringUtils.go_emailID))
                 builder.addFormDataPart("userType", userType)
-                builder.addFormDataPart("fcmToken", "16500215025")
+                try { builder.addFormDataPart("fcmToken", App.instance!!.tokenFCM)
+                } catch (e: Exception) {builder.addFormDataPart("fcmToken","fcmToken") }
                 builder.addFormDataPart("address_1", details.getString(StringUtils.go_address_1))
                 builder.addFormDataPart("address_2", details.getString(StringUtils.go_address_2))
                 builder.addFormDataPart("pincode", details.getString(StringUtils.go_Pincode))

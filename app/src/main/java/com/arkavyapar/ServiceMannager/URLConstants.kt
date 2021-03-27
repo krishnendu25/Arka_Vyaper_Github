@@ -23,5 +23,7 @@ class URLConstants {
         const val getAllProduct = "Welcome/getAllProductMasterr";
         const val hitupdateuser = "Welcome/updateuser"
 
+        const val requestproduct = "Welcome/Requestproduct"
+        const val requestallproduct = "Welcome/Requestallproduct"
     }
 }

@@ -47,8 +47,10 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:replace="android:allowBackup">
-        <activity android:name=".View.UI.RequestToUserActivity"></activity>
-        <activity android:name=".View.UI.SellerDashBoard"></activity>
+        <activity android:name=".View.UI.TransactionDetails"></activity>
+        <activity android:name=".View.UI.MyRequestList" />
+        <activity android:name=".View.UI.RequestToUserActivity" />
+        <activity android:name=".View.UI.SellerDashBoard" />
         <activity android:name=".View.UI.MyProductListing" />
         <activity
             android:name=".View.UI.DashBoardActivity"

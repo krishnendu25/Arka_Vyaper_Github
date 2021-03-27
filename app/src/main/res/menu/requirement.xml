@@ -5,22 +5,19 @@
 
 
     <item
-        android:id="@+id/byermenu"
+        android:id="@+id/for_resellingMenu"
         app:showAsAction="always"
-        android:title="Buyer" />
+        android:title="@string/for_reselling" />
 
     <item
-        android:id="@+id/sellerMenu"
+        android:id="@+id/for_business_useMenu"
         app:showAsAction="always"
-        android:title="Seller"/>
+        android:title="@string/for_business_use"/>
 
     <item
-        android:id="@+id/sellerMenu"
+        android:id="@+id/for_home_useMenu"
         app:showAsAction="always"
-        android:title="Seller"/>
+        android:title="@string/for_home_use"/>
 
-    <item
-        android:id="@+id/sellerMenu"
-        app:showAsAction="always"
-        android:title="Seller"/>
+
 </menu>

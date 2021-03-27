@@ -13,6 +13,8 @@ import com.arkavyapar.ServiceMannager.URLConstants.Companion.hitupdateuser
 import com.arkavyapar.ServiceMannager.URLConstants.Companion.productadd
 import com.arkavyapar.ServiceMannager.URLConstants.Companion.productdetailsfetch
 import com.arkavyapar.ServiceMannager.URLConstants.Companion.registration
+import com.arkavyapar.ServiceMannager.URLConstants.Companion.requestallproduct
+import com.arkavyapar.ServiceMannager.URLConstants.Companion.requestproduct
 import com.arkavyapar.ServiceMannager.URLConstants.Companion.updatelocation
 import com.arkavyapar.ServiceMannager.URLConstants.Companion.userLogin
 import com.arkavyapar.ServiceMannager.URLConstants.Companion.userdetails
@@ -112,5 +114,20 @@ interface ApiInterface {
 
     @POST(hitupdateuser)
     fun hitupdateuserApi(@Body file: RequestBody?): Call<CommonModel>
+
+
+    @FormUrlEncoded
+    @POST(requestproduct)
+    fun RequestToUserActivity(
+        @Field("userID") userID: String?,
+        @Field("listingProductID") listingProductID: String?,
+        @Field("RequestuserId") RequestuserId: String?,
+        @Field("transactionflag") transactionflag: String?,
+        @Field("message") message: String?
+    ): Call<CommonModel>
+
+    @FormUrlEncoded
+    @POST(requestallproduct)
+    fun RequestAllProduct(@Field("userID") userID: String?): Call<ResponseBody>
 
 }

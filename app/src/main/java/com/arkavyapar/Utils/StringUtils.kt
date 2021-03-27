@@ -55,7 +55,7 @@ interface StringUtils {
         var I_am_Buyer:String ="Buyer"
         var I_am_Seller:String ="Seller"
 
-
-
+        var productList:String = "productList"
+        var productList_array:String = "productList_array"
     }
 }

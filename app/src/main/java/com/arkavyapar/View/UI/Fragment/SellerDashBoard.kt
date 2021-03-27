@@ -47,7 +47,7 @@ class SellerDashBoard : Fragment() {
         var view = inflater.inflate(R.layout.fragment_seller_dash_board, container, false)
         iniView(view)
         hitGetAllBanner()
-        HitAllSellerList()
+
         hitGetAllMarketPrice()
 
 
@@ -178,6 +178,8 @@ class SellerDashBoard : Fragment() {
                     ""
                 ).toString()
             )
+            sellerProductList!!.visibility=View.VISIBLE
+            buyerRequestList!!.visibility=View.GONE
         }else{
              requestCall = App.instance!!.apiInterface!!.getAllByerListApi(
                 myCurrentLocation!!.latitude.toString(), myCurrentLocation!!.longitude.toString(),  App.instance!!.mPrefs!!.getString(
@@ -185,6 +187,8 @@ class SellerDashBoard : Fragment() {
                     ""
                 ).toString()
             )
+            sellerProductList!!.visibility=View.GONE
+            buyerRequestList!!.visibility=View.VISIBLE
         }
 
         requestCall.enqueue(object : Callback<AllSellerListApiModel> {
@@ -210,7 +214,10 @@ class SellerDashBoard : Fragment() {
             override fun onFailure(call: Call<AllSellerListApiModel>, t: Throwable) {
             }
         })
+    }
 
-
+    override fun onResume() {
+        super.onResume()
+        HitAllSellerList()
     }
 }

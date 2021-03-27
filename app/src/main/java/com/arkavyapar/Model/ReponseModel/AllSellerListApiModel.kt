@@ -1,6 +1,5 @@
 package com.arkavyapar.Model.ReponseModel
-
- data class AllSellerListApiModel(
+data class AllSellerListApiModel(
     val Seller_List: List<Seller>,
     val msg: String,
     val success: Int
@@ -26,11 +25,11 @@ data class Seller(
 )
 
 data class Product(
-    val PID: String,
-    val Productpic: String,
+    val Qty: String,
     val availabledate: String,
-    val id: String,
+    val pid: String,
     val product_Details: String,
     val productname: String,
-    val qty: String
+    val productpicture: String,
+    val user_id: String
 )

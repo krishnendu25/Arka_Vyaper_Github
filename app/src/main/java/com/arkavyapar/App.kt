@@ -10,11 +10,13 @@ import com.arkavyapar.hoori.controller.ApiClient
 import com.arkavyapar.hoori.controller.ApiInterface
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.messaging.FirebaseMessaging
 import java.io.IOException
 
 
 class App : Application() {
-
+    public var tokenFCM : String ? =null
     public var apiInterface: ApiInterface? = null
     public var mPrefs: Prefs?=null
     public var mFusedLocationProviderClient: FusedLocationProviderClient? = null
@@ -29,6 +31,12 @@ class App : Application() {
         } catch (e: Exception) {
         }
         apiInterface = ApiClient.getRetrofit()!!.create(ApiInterface::class.java)
+        FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
+            if (!task.isSuccessful) {
+                return@OnCompleteListener
+            }
+            tokenFCM = task.result
+        })
     }
 
     private fun initApplication() {

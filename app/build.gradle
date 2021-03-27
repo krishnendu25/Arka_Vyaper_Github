@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-/*apply plugin: 'com.google.gms.google-services'*/
+apply plugin: 'com.google.gms.google-services'
 android {
     compileSdkVersion 29
     buildToolsVersion "30.0.2"
@@ -10,8 +10,8 @@ android {
         applicationId "com.arkavyapar"
         minSdkVersion 23
         targetSdkVersion 29
-        versionCode 11
-        versionName "1.1.0"
+        versionCode 12
+        versionName "1.2.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -82,17 +82,18 @@ dependencies {
     implementation 'com.github.Temidtech:AndroidOtpCustomViewmaster:1.0'
     // map
     implementation 'com.google.android.gms:play-services-location:18.0.0'
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+    implementation 'com.google.android.libraries.places:places:2.4.0'
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
     implementation 'com.google.maps.android:android-maps-utils:0.5'
     implementation 'com.daimajia.androidanimations:library:2.4@aar'
     implementation 'com.skyfishjy.ripplebackground:library:1.0.1'
     implementation 'com.github.CaiJingLong:Android-CustomRatingBar:-SNAPSHOT'
     // Import the Firebase BoM
-   /* implementation platform('com.google.firebase:firebase-bom:26.4.0')
+    implementation platform('com.google.firebase:firebase-bom:26.4.0')
     implementation 'com.google.firebase:firebase-analytics-ktx'
     implementation 'com.google.firebase:firebase-crashlytics-ktx'
-    implementation 'com.google.firebase:firebase-perf-ktx'*/
+    implementation 'com.google.firebase:firebase-messaging-ktx'
+
 }
-/*
 apply plugin: 'com.google.firebase.crashlytics'
-apply plugin: 'com.google.firebase.firebase-perf'*/

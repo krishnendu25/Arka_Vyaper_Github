@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.Temidtech:AndroidOtpCustomViewmaster:1.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ecfacf2ddae01db79d00ac9e3b1b1d3f/jetified-AndroidOtpCustomViewmaster-1.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ecfacf2ddae01db79d00ac9e3b1b1d3f/jetified-AndroidOtpCustomViewmaster-1.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ecfacf2ddae01db79d00ac9e3b1b1d3f/jetified-AndroidOtpCustomViewmaster-1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3e021856d5b9d4db6c0f0799860ef7b5/jetified-AndroidOtpCustomViewmaster-1.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3e021856d5b9d4db6c0f0799860ef7b5/jetified-AndroidOtpCustomViewmaster-1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3e021856d5b9d4db6c0f0799860ef7b5/jetified-AndroidOtpCustomViewmaster-1.0/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

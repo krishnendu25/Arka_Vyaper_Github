@@ -44,7 +44,7 @@ class LocalModel {
                             null
                         )
                         dialogBuilder.setView(dialogView)
-                        dialogBuilder.setCancelable(false)
+                        dialogBuilder.setCancelable(true)
                         progressDialog = dialogBuilder.create()
                         progressDialog!!.getWindow()!!.setBackgroundDrawableResource(R.color.transparent)
                         progressDialog!!.show()

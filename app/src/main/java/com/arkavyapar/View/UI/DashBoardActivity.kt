@@ -1,6 +1,7 @@
 package com.arkavyapar.View.UI
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.ActivityNotFoundException
 import android.content.Context
@@ -18,7 +19,9 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.core.app.ActivityCompat
+import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.arkavyapar.App
 import com.arkavyapar.Constant.Animation
@@ -28,16 +31,15 @@ import com.arkavyapar.Model.MapUserFilter
 import com.arkavyapar.Model.ReponseModel.*
 import com.arkavyapar.Model.UserDetailsInfoMap
 import com.arkavyapar.R
-import com.arkavyapar.Utils.CurvedBottomNavigationView
+import com.arkavyapar.Utils.*
 import com.arkavyapar.Utils.Loader.LocalModel
-import com.arkavyapar.Utils.StringUtils
-import com.arkavyapar.Utils.ToastUtils
-import com.arkavyapar.Utils.Utils
 import com.arkavyapar.View.Adapter.SellerBeyerLocation.MapFilterCallback
 import com.arkavyapar.View.Adapter.SellerBeyerLocation.SellBYELocation
 import com.arkavyapar.View.Interface.AlertTask
+import com.arkavyapar.View.UI.Fragment.ProfileFragment
 import com.arkavyapar.View.UI.Fragment.SellerDashBoard
 import com.google.android.gms.common.api.GoogleApiClient
+import com.google.android.gms.common.api.Status
 import com.google.android.gms.location.*
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -46,6 +48,13 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.*
 import com.google.android.gms.tasks.OnFailureListener
 import com.google.android.gms.tasks.OnSuccessListener
+import com.google.android.libraries.places.api.Places
+import com.google.android.libraries.places.api.model.Place
+import com.google.android.libraries.places.api.net.PlacesClient
+import com.google.android.libraries.places.widget.Autocomplete
+import com.google.android.libraries.places.widget.AutocompleteActivity
+import com.google.android.libraries.places.widget.AutocompleteSupportFragment
+import com.google.android.libraries.places.widget.model.AutocompleteActivityMode
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
@@ -74,6 +83,7 @@ class DashBoardActivity : AppCompatActivity() , View.OnClickListener ,
     var container_map: RelativeLayout? = null
     lateinit var mActivity: Activity
     var userProfileIV: CircleImageView? = null
+    private val AUTOCOMPLETE_REQUEST_CODE = 1
     var userNameTV: TextView? = null
     var userRollTV: TextView? = null
     var searchView:RelativeLayout?=null
@@ -107,6 +117,7 @@ class DashBoardActivity : AppCompatActivity() , View.OnClickListener ,
     var card_callUser: TextView? = null
     var markerInfoWindow:RelativeLayout? = null
     var card_closeDialog:ImageView? = null
+    private var autocompleteFragment: AutocompleteSupportFragment? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dash_board)
@@ -185,6 +196,13 @@ class DashBoardActivity : AppCompatActivity() , View.OnClickListener ,
         markerInfoWindow =  findViewById(R.id.markerInfoWindow);
         card_closeDialog =  findViewById(R.id.card_closeDialog);
         card_closeDialog!!.setOnClickListener(this)
+        val APIKEY: String = "AIzaSyAIbjK-LlK7ltu_ycyCYRY96kb2JspDMj8"
+        if (!Places.isInitialized()) {
+            Places.initialize(applicationContext, APIKEY)
+        }
+        val placesClient: PlacesClient = Places.createClient(this)
+        autocompleteFragment =
+            supportFragmentManager.findFragmentById(R.id.autocomplete_fragment) as AutocompleteSupportFragment?
     }
 
     private fun userUIPermissions(userType: String) {
@@ -203,20 +221,40 @@ class DashBoardActivity : AppCompatActivity() , View.OnClickListener ,
     }
 
 
-    fun openNavigationDraw(view: View) {drawer_layout!!.openDrawer(Gravity.LEFT);
-    }
-
+    fun openNavigationDraw(view: View) {drawer_layout!!.openDrawer(Gravity.LEFT);}
+  /* */
     override fun onClick(v: View?) {
        when(v!!.id){
+           R.id.menu_ProfileSettings->{
+               drawer_layout!!.closeDrawer(GravityCompat.START);
+               ReplaceFragments(ProfileFragment.newInstance())
+           }
+           R.id.menu_Transaction->{
+               Utils.launchActivity(this@DashBoardActivity,TransactionDetails::class.java)
+           }
+           R.id.menu_BuyerList->{
+               Utils.launchActivity(this@DashBoardActivity,MyRequestList::class.java)
+           }
+           R.id.ChangeLocation -> {
+               val fields = Arrays.asList(
+                   Place.Field.ID,
+                   Place.Field.NAME,
+                   Place.Field.ADDRESS,
+                   Place.Field.LAT_LNG
+               )
+               val df = Autocomplete.IntentBuilder(AutocompleteActivityMode.FULLSCREEN, fields)
+                   .build(this@DashBoardActivity)
+               startActivityForResult(df, AUTOCOMPLETE_REQUEST_CODE)
+           }
            R.id.userRoalrole_floatCard -> {
                PopupMenu(v.context, v).apply {
                    menuInflater.inflate(R.menu.role_menu, menu)
                    setOnMenuItemClickListener { item ->
                        role_floatCard!!.setText(item.title)
-                       if (item.title.equals("Buyer")){
-                           hitUpdateUserDetails(true,false,"1")
-                       }else{
-                           hitUpdateUserDetails(true,false,"2")
+                       if (item.title.equals("Buyer")) {
+                           hitUpdateUserDetails(true, false, "1")
+                       } else {
+                           hitUpdateUserDetails(true, false, "2")
                        }
 
 
@@ -261,23 +299,53 @@ class DashBoardActivity : AppCompatActivity() , View.OnClickListener ,
        }
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        if (requestCode === AUTOCOMPLETE_REQUEST_CODE) {
+            if (resultCode === RESULT_OK) {
+                val place = Autocomplete.getPlaceFromIntent(data!!)
+                val location = Location("")
+                location.latitude = place.latLng!!.latitude
+                location.longitude = place.latLng!!.longitude
+                hitUpdate(location)
+                var details = Constants.getAllAddress(LatLng(location.latitude, location.longitude))
+                var jsonObject = JSONObject()
+                jsonObject.put("address_1", details.getString("address"))
+                jsonObject.put("address_2", details.getString("knownName"))
+                jsonObject.put("latitude", place.latLng!!.latitude)
+                jsonObject.put("longitude", place.latLng!!.longitude)
+                jsonObject.put("pincode", details.getString("postalCode"))
+                jsonObject.put("city", details.getString("city"))
+                jsonObject.put("state", details.getString("state"))
+                hitUpdateUserDetails(false, true, jsonObject.toString());
+            } else if (resultCode === AutocompleteActivity.RESULT_ERROR) {
+                val status: Status = Autocomplete.getStatusFromIntent(data!!)
+            } else if (resultCode === RESULT_CANCELED) {
+            }
+            return
+        }
+        super.onActivityResult(requestCode, resultCode, data)
+    }
+
+
     private fun hitUpdateUserDetails(userType: Boolean, location: Boolean, values: String) {
         val builder = MultipartBody.Builder()
         builder.setType(MultipartBody.FORM)
-        builder.addFormDataPart("userID", App.instance!!.mPrefs!!.getString(
-            StringUtils.userID,
-            ""
-        ).toString())
+        builder.addFormDataPart(
+            "userID", App.instance!!.mPrefs!!.getString(
+                StringUtils.userID,
+                ""
+            ).toString()
+        )
         if (userType)
-        builder.addFormDataPart("userType",values)
+        builder.addFormDataPart("userType", values)
         if (location){
-            builder.addFormDataPart("address_1",JSONObject(values).getString("address_1"))
-            builder.addFormDataPart("address_2",JSONObject(values).getString("address_2"))
-            builder.addFormDataPart("latitude",JSONObject(values).getString("latitude"))
-            builder.addFormDataPart("longitude",JSONObject(values).getString("longitude"))
-            builder.addFormDataPart("pincode",JSONObject(values).getString("pincode"))
-            builder.addFormDataPart("city",JSONObject(values).getString("city"))
-            builder.addFormDataPart("state",JSONObject(values).getString("state"))
+            builder.addFormDataPart("address_1", JSONObject(values).getString("address_1"))
+            builder.addFormDataPart("address_2", JSONObject(values).getString("address_2"))
+            builder.addFormDataPart("latitude", JSONObject(values).getString("latitude"))
+            builder.addFormDataPart("longitude", JSONObject(values).getString("longitude"))
+            builder.addFormDataPart("pincode", JSONObject(values).getString("pincode"))
+            builder.addFormDataPart("city", JSONObject(values).getString("city"))
+            builder.addFormDataPart("state", JSONObject(values).getString("state"))
         }
 
         LocalModel.instance!!.showProgressDialog(this@DashBoardActivity, "Loading..")
@@ -288,13 +356,29 @@ class DashBoardActivity : AppCompatActivity() , View.OnClickListener ,
                 if (response.body() != null) {
                     LocalModel.instance!!.cancelProgressDialog()
                     if (response.body()?.success.toString().trim().equals("1")) {
+                        if (values.equals("1")) {
+                            userRollTV!!.setText(StringUtils.I_am_Buyer)
+                            App!!.instance!!.mPrefs!!.setString(
+                                StringUtils.userRole,
+                                StringUtils.I_am_Buyer
+                            )
+                            card_tag!!.setBackgroundResource(R.drawable.ic_blue_tag)
+                            role_floatCard!!.text = StringUtils.I_am_Buyer
+                            userUIPermissions(StringUtils.I_am_Buyer)
+                        } else {
+                            App!!.instance!!.mPrefs!!.setString(
+                                StringUtils.userRole,
+                                StringUtils.I_am_Seller
+                            )
+                            card_tag!!.setBackgroundResource(R.drawable.ic_yellow_tag)
+                            userRollTV!!.setText(StringUtils.I_am_Seller)
+                            role_floatCard!!.text = StringUtils.I_am_Seller
+                            userUIPermissions(StringUtils.I_am_Seller)
+                        }
+
+
                         startTimerThread()
-                        hitgetUser(
-                            true, App.instance!!.mPrefs!!.getString(
-                                StringUtils.userID,
-                                ""
-                            ).toString(), false
-                        )
+                        Utils.launchActivityWithFinish(this@DashBoardActivity, DashBoardActivity::class.java)
                     }
 
                 } else {
@@ -310,6 +394,7 @@ class DashBoardActivity : AppCompatActivity() , View.OnClickListener ,
 
     }
 
+    @SuppressLint("MissingPermission")
     private fun getMyCurrentLocation(setMarker: Boolean, mapclear: Boolean) {
         if (locationManager!!.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
             if (ActivityCompat.checkSelfPermission(
@@ -445,7 +530,7 @@ class DashBoardActivity : AppCompatActivity() , View.OnClickListener ,
     override fun onResume() {
         super.onResume()
         hitgetUser(
-            true,
+            false,
             App.instance!!.mPrefs!!.getString(StringUtils.userID, "").toString(),
             false
         )
@@ -468,13 +553,14 @@ class DashBoardActivity : AppCompatActivity() , View.OnClickListener ,
                         }
 
                         userNameTV!!.setText(response.body()?.userdetails!!.USERNAME)
+                        Addrrss_floatCard!!.setText(response.body()?.userdetails!!.ADDRESS1)
                         if (response.body()?.userdetails!!.USERTYPE.equals("1")) {
                             userRollTV!!.setText(StringUtils.I_am_Buyer)
                             App!!.instance!!.mPrefs!!.setString(
                                 StringUtils.userRole,
                                 StringUtils.I_am_Buyer
                             )
-                            card_tag!!.setBackgroundResource(R.drawable.ic_blue_tag)
+                            card_tag!!.setImageDrawable(resources.getDrawable(R.drawable.ic_blue_tag))
                             role_floatCard!!.text = StringUtils.I_am_Buyer
                             userUIPermissions(StringUtils.I_am_Buyer)
                         } else {
@@ -482,19 +568,19 @@ class DashBoardActivity : AppCompatActivity() , View.OnClickListener ,
                                 StringUtils.userRole,
                                 StringUtils.I_am_Seller
                             )
-                            card_tag!!.setBackgroundResource(R.drawable.ic_yellow_tag)
+                            card_tag!!.setImageDrawable(resources.getDrawable(R.drawable.ic_yellow_tag))
                             userRollTV!!.setText(StringUtils.I_am_Seller)
                             role_floatCard!!.text = StringUtils.I_am_Seller
                             userUIPermissions(StringUtils.I_am_Seller)
                         }
-                        if (!response.body()?.userdetails!!.Profileverified.equals("")){
-                            if (response.body()?.userdetails!!.Profileverified.equals("true")){
-                                card_tag!!.visibility=View.VISIBLE
-                            }else{
-                                card_tag!!.visibility=View.GONE
+                        if (!response.body()?.userdetails!!.Profileverified.equals("")) {
+                            if (response.body()?.userdetails!!.Profileverified.equals("true")) {
+                                card_tag!!.visibility = View.VISIBLE
+                            } else {
+                                card_tag!!.visibility = View.GONE
                             }
-                        }else{
-                            card_tag!!.visibility=View.GONE
+                        } else {
+                            card_tag!!.visibility = View.GONE
                         }
 
 
@@ -574,6 +660,9 @@ class DashBoardActivity : AppCompatActivity() , View.OnClickListener ,
             }
 
             R.id.profile -> {
+                searchView!!.visibility = View.GONE
+                container_map!!.visibility = View.GONE
+                ReplaceFragments(ProfileFragment.newInstance())
 
             }
             R.id.settings -> {
@@ -583,7 +672,7 @@ class DashBoardActivity : AppCompatActivity() , View.OnClickListener ,
         return true;
     }
 
-    private fun ReplaceFragments(newInstance: SellerDashBoard) {
+    private fun ReplaceFragments(newInstance: Fragment) {
         supportFragmentManager.beginTransaction().replace(R.id.container, newInstance).commit();
     }
 

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="@dimen/padding_5"
+    app:cardCornerRadius="@dimen/padding_5"
+    android:layout_margin="@dimen/padding_10"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:scaleType="centerCrop"/>
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Apple"
+            android:layout_marginTop="@dimen/padding_5"
+            android:textSize="@dimen/dimen_16dp"
+            android:singleLine="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_bold"/>
+        <TextView
+            android:id="@+id/ProductQynt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="100 Qyt"
+            android:layout_marginTop="@dimen/padding_5"
+            android:textSize="@dimen/dimen_14sp"
+            android:singleLine="true"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/poppinsregular"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
